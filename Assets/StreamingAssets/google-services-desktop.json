@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "499482154988",
+    "project_id": "unityhush",
+    "storage_bucket": "unityhush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499482154988:android:8d29539380664014a112c9",
+        "android_client_info": {
+          "package_name": "com.Jiwon.Hush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499482154988-05s0koelv85cjrus51rabuuh337653vh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Jiwon.Hush",
+            "certificate_hash": "bad210a9ef4931bc25d3285219504f96d41aae79"
+          }
+        },
+        {
+          "client_id": "499482154988-vhp9ueebqv8ka1h3ulpsj862hu1l6frs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8usoODWWhuDIWc6m7IxrHD1SqILd0ems"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499482154988-vhp9ueebqv8ka1h3ulpsj862hu1l6frs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
