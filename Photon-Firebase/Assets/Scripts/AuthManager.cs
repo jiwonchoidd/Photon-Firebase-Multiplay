@@ -58,6 +58,8 @@ public class AuthManager : MonoBehaviour
     {
         if (!isFirebaseReady || isSignInOnProgress || User!=null)
         {
+            errorPanel.SetActive(true);
+            errorText.text = "You missed something.";
             return;
         }
 
@@ -75,7 +77,12 @@ public class AuthManager : MonoBehaviour
             {
                 Debug.LogError(task.Exception);
                 errorPanel.SetActive(true);
-                errorText.text = "The account is not exist";
+                if (emailField.text=="" || passwordField.text=="")
+                {
+                errorText.text = "You missed something.";
+                }
+                else
+                errorText.text = "This account is not exist";
             }
             else if(task.IsCanceled)
             {
@@ -91,9 +98,72 @@ public class AuthManager : MonoBehaviour
             }
         });
     }
+    public void CreateAccount()
+    {
+        if(!PlayerPrefs.HasKey("alreadycreate"))
+        {
+            PlayerPrefs.SetInt("alreadycreate", 0);
+            PlayerPrefs.Save();
+        }
+        if(PlayerPrefs.GetInt("alreadycreate")==1)
+        {
+            Debug.LogError("already create");
+            errorPanel.SetActive(true);
+            errorText.text = "You have already created an account on this device.";
+            return;
+        }
+        string email = emailField.text.Trim();
+        string pwd = passwordField.text.Trim();
+
+        firebaseAuth.CreateUserWithEmailAndPasswordAsync(email, pwd).ContinueWithOnMainThread((task) =>
+            {
+                signinbutton.interactable = true;
+                if (task.IsFaulted)
+                {
+                    Debug.LogError(task.Exception);
+                    errorPanel.SetActive(true);
+                    if (emailField.text == "" || passwordField.text == "")
+                    {
+                        errorText.text = "You missed something.";
+                    }
+                    else
+                        errorText.text = "This account is inappropriate.";
+                }
+                else if (task.IsCanceled)
+                {
+                    Debug.LogError("Signin Canceled");
+                    errorPanel.SetActive(true);
+                    errorText.text = "Signin Canceled";
+                }
+                else
+                {
+                    User = task.Result;
+                    Debug.Log(User.Email);
+                    SceneManager.LoadScene("Signin");
+                    //한 기기 당 하나 씩 만들 수 있게...
+                    //PlayerPrefs를 이용하자
+                    PlayerPrefs.SetInt("alreadycreate", 1);
+                    PlayerPrefs.Save();
+                }
+            });
+
+     }
     public void resetSignIn()
     {
         SceneManager.LoadScene("Signin");
+    }
+    public void resetCreateAccount()
+    {
+        SceneManager.LoadScene("CreateAccount");
+    }
+    public void resetPlayerPref()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+    private IEnumerator TimeDelay(float i, string scene)
+    {
+        yield return new WaitForSeconds(i);
+        SceneManager.LoadScene(scene);
     }
 
 }
