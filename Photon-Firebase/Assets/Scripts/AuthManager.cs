@@ -56,7 +56,7 @@ public class AuthManager : MonoBehaviour
 
     public void SignIn()
     {
-        if (!isFirebaseReady || isSignInOnProgress || User!=null)
+        if (!isFirebaseReady || isSignInOnProgress /*|| User!=null*/)
         {
             errorPanel.SetActive(true);
             errorText.text = "You missed something.";
@@ -77,7 +77,7 @@ public class AuthManager : MonoBehaviour
             {
                 Debug.LogError(task.Exception);
                 errorPanel.SetActive(true);
-                if (emailField.text=="" || passwordField.text=="")
+                if (emailField.text.Length==0|| passwordField.text.Length == 0)
                 {
                 errorText.text = "You missed something.";
                 }
@@ -122,7 +122,7 @@ public class AuthManager : MonoBehaviour
                 {
                     Debug.LogError(task.Exception);
                     errorPanel.SetActive(true);
-                    if (emailField.text == "" || passwordField.text == "")
+                    if (emailField.text.Length == 0 || passwordField.text.Length == 0)
                     {
                         errorText.text = "You missed something.";
                     }
