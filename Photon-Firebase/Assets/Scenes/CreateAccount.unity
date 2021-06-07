@@ -1248,7 +1248,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1279471939}
         m_TargetAssemblyTypeName: AuthManager, Assembly-CSharp
-        m_MethodName: SignIn
+        m_MethodName: resetSignIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1895,7 +1895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11434868, guid: 751f7137cfffd4a16b1a4c191e687d64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: resetSignIn
+      value: resetCreateAccount
       objectReference: {fileID: 0}
     - target: {fileID: 11434868, guid: 751f7137cfffd4a16b1a4c191e687d64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
