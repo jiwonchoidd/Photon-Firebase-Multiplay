@@ -8,12 +8,6 @@ Photon-Firebase-Multiplay 포톤과 파이어베이스를 활용한 멀티게임
 * Master branch : It is Manage only the state that can be distributed
 * Develop branch : It is Used to merge branches for feature development
 
-### Secondary branch
-
-* Feature branch : Branch to develop the function ex)feature/profile
-* Fix branch : Branch to fix the function ex)fix/profile
-
-
 ## Commit rule
 ```console
 git commit -m "text"
