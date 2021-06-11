@@ -8,9 +8,6 @@ using UnityEngine.UI;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
-    [Header("DisconnectPanel")]
-    public InputField NickNameInput;
-
     [Header("LobbyPanel")]
     public GameObject LobbyPanel;
     public InputField RoomInput;
@@ -96,11 +93,26 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
+        // 로비 패널 켜짐
         LobbyPanel.SetActive(true);
         RoomPanel.SetActive(false);
-        PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
+        //캐릭터 이름 설정!!
+        PhotonNetwork.LocalPlayer.NickName = Autonaming();
         WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
+
+        //리스트 초기화
         myList.Clear();
+    }
+
+        // 이메일에서 이름 뺴올꺼임
+    private string Autonaming()
+    {
+        //IndexOf는 특정 문자의 인덱스를 문자열에서 찾아 반환한다
+        //Substring은 문자열의 위치를 이용하여 컨트롤하는 함수다
+        string email = AuthManager.User.Email;
+        string golbang = "@";
+        int pos = email.IndexOf(golbang);
+        return email.Substring(0, pos);
     }
 
     public void Disconnect() => PhotonNetwork.Disconnect();
