@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -30,6 +30,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
+
+    public bool isLobby;
+
+
+
 
 
     #region 방리스트 갱신
@@ -79,6 +84,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
 
     #region 서버연결
+
+    private void Start()
+    {
+        //불값 로비인 경우만 바로 시작시 연결 시도
+        if(isLobby)
+        Connect();
+    }
     void Awake() => Screen.SetResolution(960, 540, false);
 
     void Update()
@@ -154,6 +166,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         RoomRenewal();
         ChatRPC("<color=yellow>" + otherPlayer.NickName + "님이 퇴장하셨습니다</color>");
+    }
+
+    public override void OnLeftLobby()
+    {
+        PhotonNetwork.LeaveLobby();
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Signin");
     }
 
     void RoomRenewal()
