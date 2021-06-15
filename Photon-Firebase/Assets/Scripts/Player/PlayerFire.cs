@@ -13,6 +13,8 @@ public class PlayerFire : MonoBehaviour
     public Animator anim;
     ParticleSystem ps;
 
+    public float knifeDistance = 1.5f;
+
     void Start()
     {
 
@@ -23,7 +25,7 @@ public class PlayerFire : MonoBehaviour
         // 만일, 마우스 우 클릭을 하면...
         if (Input.GetButtonDown("Fire2"))
         {
-           
+           //
         }
 
         // 만일, 마우스 좌 클릭을 하면...
@@ -43,21 +45,27 @@ public class PlayerFire : MonoBehaviour
             // 3. 레이를 발사한다!
             if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
             {
+
+                // 가능한 범위에 들어와있을때
+                if(knifeDistance > hitInfo.distance)
+                {
                 // 부딪힌 대상의 이름을 콘솔에 출력한다.
-                //print(hitInfo.transform.name);
+                print(hitInfo.transform.name);
+
+                }
 
                 // 부딪힌 대상의 위치에 이펙트를 생성하고 이펙트를 실행한다.
-                GameObject go = Instantiate(fireEffect);
+               // GameObject go = Instantiate(fireEffect);
 
                 // 생성한 이펙트의 위치를 레이가 닿은 지점으로 한다.
-                go.transform.position = hitInfo.point;
+                //go.transform.position = hitInfo.point;
 
                 // 생성한 이펙트의 up 방향을 레이가 닿은 지점의 노멀 벡터와 일치시킨다.
-                go.transform.up = hitInfo.normal;
+                //go.transform.up = hitInfo.normal;
 
-                ps = go.GetComponent<ParticleSystem>();
-                ps.Stop();
-                ps.Play();
+                //ps = go.GetComponent<ParticleSystem>();
+                //ps.Stop();
+                //ps.Play();
 
                 /*// 방법 1> 부딪힌 대상이 enemy라면, EnemyFSM 컴포넌트를 가져와서 Damaged 함수를 실행한다.
                 if (hitInfo.transform.name.Contains("Enemy"))

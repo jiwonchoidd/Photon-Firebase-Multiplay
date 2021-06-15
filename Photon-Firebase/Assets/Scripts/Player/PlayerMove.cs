@@ -18,11 +18,20 @@ public class PlayerMove : MonoBehaviour
 
     [Header("그 외")]
     CharacterController cc;
-
+    bool isjumping = false;
+    public int healthPoint = 100;
 
     void Start()
     {
         cc = transform.GetComponent<CharacterController>();
+    }
+
+    public void ApplyDamage(int val)
+    {
+        healthPoint -= val;
+        healthPoint = Mathf.Max(healthPoint, 0);
+
+        print("현재 체력: " + healthPoint);
     }
 
     private void LateUpdate()
@@ -33,7 +42,7 @@ public class PlayerMove : MonoBehaviour
 
         // 방향을 설정한다.
         Vector3 dir = new Vector3(h, 0, v);
-        //dir.Normalize();
+        dir.Normalize();
 
         // 방향 벡터를 카메라의 방향을 기준으로 재계산한다.
         dir = Camera.main.transform.TransformDirection(dir);
@@ -41,7 +50,13 @@ public class PlayerMove : MonoBehaviour
         // 땅에 닿았으면 점프 횟수를 초기화한다.
         if (cc.collisionFlags == CollisionFlags.Below)
         {
-            jumpCount = 2;
+            jumpCount = 1;
+            isjumping = false;
+        }
+        else
+        {
+            //공중에서 속도 조절 못하게 즉 쉬프트 움직임
+            isjumping = true;
         }
 
         // 사용자의 space 키 입력을 받는다.
@@ -49,19 +64,17 @@ public class PlayerMove : MonoBehaviour
         {
             // 위쪽 방향으로의 힘(점프력)을 추가한다.
             yVelocity = jumpPower;
-            //yVelocity = tongtong;
             jumpCount--;
         }
 
         // 입력된 방향으로 이동한다(p = p0 + vt).
-        //transform.position += dir * moveSpeed * Time.deltaTime;
 
         moveSpeed = walkSpeed;
         float animSpeed = 0;
 
         if (dir.magnitude > 0)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && !isjumping)
             {
                 animSpeed = moveSpeed = dir.magnitude * runSpeed;
             }
@@ -72,6 +85,11 @@ public class PlayerMove : MonoBehaviour
         }
 
         // 중력 값을 적용한다.
+        if(yVelocity < gravity)
+        {
+
+        }
+        else
         yVelocity += gravity * Time.deltaTime;
         dir.y = yVelocity;
 
