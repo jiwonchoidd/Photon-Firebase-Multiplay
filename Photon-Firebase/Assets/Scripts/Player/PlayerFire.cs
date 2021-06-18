@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class PlayerFire : MonoBehaviour
+public class PlayerFire : MonoBehaviourPun
 {
     // 마우스 우 클릭을 하면 총알이 발사되게 하고 싶다.
     // 필요 요소: 총알 오브젝트, 우클릭 입력, 발사 위치
@@ -50,7 +51,11 @@ public class PlayerFire : MonoBehaviour
                 if(knifeDistance > hitInfo.distance)
                 {
                 // 부딪힌 대상의 이름을 콘솔에 출력한다.
-                print(hitInfo.transform.name);
+                    print(hitInfo.transform.name);
+                    if (!photonView.IsMine && hitInfo.transform.tag == "Player" && hitInfo.transform.GetComponent<PhotonView>().IsMine)
+                    {
+                        hitInfo.transform.GetComponent<PlayerNetwork>().Hit();
+                    }
 
                 }
 

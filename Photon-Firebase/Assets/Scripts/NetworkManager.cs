@@ -23,6 +23,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text RoomInfoText;
     public Text[] ChatText;
     public InputField ChatInput;
+    public Button gameStartbtn;
 
     [Header("ETC")]
     public Text StatusText;
@@ -32,10 +33,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     int currentPage = 1, maxPage, multiple;
 
     public bool isLobby;
-
-
-
-
+    public bool isReady;
 
     #region 방리스트 갱신
     // ◀버튼 -2 , ▶버튼 -1 , 셀 숫자
@@ -119,6 +117,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         // 이메일에서 이름 뺴올꺼임
     private string Autonaming()
     {
+        if(AuthManager.User.Email=="")
+        {
+            string tempname = "Player";
+            return tempname;
+        }
         //IndexOf는 특정 문자의 인덱스를 문자열에서 찾아 반환한다
         //Substring은 문자열의 위치를 이용하여 컨트롤하는 함수다
         string email = AuthManager.User.Email;
@@ -168,6 +171,30 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         ChatRPC("<color=yellow>" + otherPlayer.NickName + "님이 퇴장하셨습니다</color>");
     }
 
+    public void GameStart()
+    {
+        //모두 같은 씬으로 이동하게 됨...
+        PhotonNetwork.AutomaticallySyncScene= true;
+        //마스터만 할수 있음 
+
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            gameStartbtn.enabled = false;
+            Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
+            return; 
+        }
+
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        {
+            Debug.Log("혼자 뭐할라고");
+        }
+        else
+        {
+            Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
+            PhotonNetwork.LoadLevel("Play");
+        }
+    }
+
     public override void OnLeftLobby()
     {
         PhotonNetwork.LeaveLobby();
@@ -209,5 +236,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             ChatText[ChatText.Length - 1].text = msg;
         }
     }
+    #endregion
+
+
+    #region 인게임
+
     #endregion
 }
