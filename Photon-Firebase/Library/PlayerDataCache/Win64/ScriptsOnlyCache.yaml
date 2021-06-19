@@ -41,7 +41,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
-    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -73,8 +72,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
-    com.unity.cinemachine.editor.dll:
-    - Cinemachine.Editor.CinemachineBlenderSettingsEditor
   sceneClasses:
     Assets/Scenes/CreateAccount.unity:
     - Class: 1
@@ -92,8 +89,6 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -124,9 +119,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3586}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,8 +163,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -207,29 +200,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3200}
+      Script: {instanceID: 3202}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3212}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3506}
     - Class: 114
-      Script: {instanceID: 3636}
+      Script: {instanceID: 3638}
     - Class: 114
-      Script: {instanceID: 3760}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3904}
+      Script: {instanceID: 3906}
     - Class: 114
-      Script: {instanceID: 4180}
+      Script: {instanceID: 4182}
     - Class: 114
-      Script: {instanceID: 4352}
+      Script: {instanceID: 4354}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5188}
+      Script: {instanceID: 5190}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 5212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -308,23 +301,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3200}
+      Script: {instanceID: 3202}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3328}
+      Script: {instanceID: 3330}
     - Class: 114
-      Script: {instanceID: 3760}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3936}
+      Script: {instanceID: 3938}
     - Class: 114
-      Script: {instanceID: 4482}
+      Script: {instanceID: 4484}
     - Class: 114
-      Script: {instanceID: 4780}
+      Script: {instanceID: 4782}
     - Class: 114
-      Script: {instanceID: 4936}
+      Script: {instanceID: 4938}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -433,37 +426,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3200}
-    - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3202}
     - Class: 114
       Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3760}
+      Script: {instanceID: 3586}
     - Class: 114
-      Script: {instanceID: 3806}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3936}
+      Script: {instanceID: 3808}
     - Class: 114
-      Script: {instanceID: 4126}
+      Script: {instanceID: 3938}
     - Class: 114
-      Script: {instanceID: 4130}
+      Script: {instanceID: 4128}
     - Class: 114
-      Script: {instanceID: 4306}
+      Script: {instanceID: 4132}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 4308}
     - Class: 114
-      Script: {instanceID: 4780}
+      Script: {instanceID: 4350}
     - Class: 114
-      Script: {instanceID: 4936}
+      Script: {instanceID: 4782}
     - Class: 114
-      Script: {instanceID: 4952}
+      Script: {instanceID: 4938}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 4954}
     - Class: 114
-      Script: {instanceID: 5306}
+      Script: {instanceID: 5006}
+    - Class: 114
+      Script: {instanceID: 5308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -737,7 +730,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsVisibleProperty
   - hash:
       serializedVersion: 2
-      Hash: d602be5e7ae5c89a6d7186c013174a1b
+      Hash: 9b34551caa37780f5673cd314e7a2605
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NetworkManager
@@ -1187,6 +1180,12 @@ ScriptsOnlyBuild:
     className: Cinemachine3rdPersonFollow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OutofWorld
+  - hash:
+      serializedVersion: 2
       Hash: 57d2b3ca58a430f7cf319bb757c1f0f5
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1295,7 +1294,7 @@ ScriptsOnlyBuild:
     className: IsConnectedAndReadyProperty
   - hash:
       serializedVersion: 2
-      Hash: 6e5f41b8e0e381dd399bf8bc90d4af93
+      Hash: b268820a4e1cb5a8b6e2fa92043b1516
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -2181,12 +2180,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OutofWorld
   platform: 19
   scenePathNames:
   - Assets/Scenes/Signin.unity

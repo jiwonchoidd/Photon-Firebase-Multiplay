@@ -24,11 +24,9 @@ public class PlayerNetwork : MonoBehaviourPun
             this.GetComponent<PlayerMove>().enabled = false;
             this.GetComponent<PlayerRotation>().enabled = false;
             hand.layer = 3;
-   
-            
         }
                         
-        healthSlider = GameObject.Find("Canvas_PlayerUI").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
+        
         animator = GetComponent<Animator>();
     }
 
@@ -55,6 +53,7 @@ public class PlayerNetwork : MonoBehaviourPun
     }
     public void OutofWorld()
     {
+        healthSlider = GameObject.Find("Canvas_PlayerUI").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
         healthSlider.value = 0f;
         if (healthSlider.value <= 0)
         {
@@ -64,6 +63,7 @@ public class PlayerNetwork : MonoBehaviourPun
     #endregion
     public void Hit()
     {
+        healthSlider = GameObject.Find("Canvas_PlayerUI").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
         healthSlider.value-= 0.1f;
         if(healthSlider.value<=0)
         {
@@ -73,11 +73,13 @@ public class PlayerNetwork : MonoBehaviourPun
 
     private void Dead()
     {
+        GameObject.Find("DieCamera").GetComponent<AudioListener>().enabled = true;
         GameObject.Find("Canvas_Die").transform.Find("Panel_Respawn").gameObject.SetActive(true);
         //복제 버그 막기위해 올 버퍼드
         photonView.RPC("DestroyRPC", RpcTarget.AllBuffered);
         animator.SetBool("isDead", true);
         GameManager.instance.ISDEAD = true;
+        //죽으면 카메라 삭제되어서 기본 카메라 켜줌
     }
 
     [PunRPC]

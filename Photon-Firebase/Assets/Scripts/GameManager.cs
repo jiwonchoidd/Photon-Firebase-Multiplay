@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     public GameObject playerPrefab;
-    public GameObject camera;
+    public GameObject dieCamera;
 
     public Text tx_time;
     public Text tx_alert;
@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviourPunCallbacks
         var spawnPosition = spawnPositions[localPlayerIndex];
         // 플레이어 생성 
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition.position, spawnPosition.rotation);
+
+        dieCamera.GetComponent<AudioListener>().enabled = false;
+
     }
 
     #region 방 떠나기
