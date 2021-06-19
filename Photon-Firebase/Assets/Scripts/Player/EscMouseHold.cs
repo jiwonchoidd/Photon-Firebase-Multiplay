@@ -27,22 +27,33 @@ public class EscMouseHold : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Cancel"))
+        if (!GameManager.instance.ISDEAD)
         {
-            if(!isEsc)
+
+            if (Input.GetButtonDown("Cancel"))
             {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                isEsc = true;
-                panel_Esc.SetActive(true);
+                if (!isEsc)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    isEsc = true;
+                    panel_Esc.SetActive(true);
+                }
+                else if (isEsc)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                    isEsc = false;
+                    panel_Esc.SetActive(false);
+                }
             }
-            else if(isEsc)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                isEsc = false;
-                panel_Esc.SetActive(false);
-            }
+
+
         }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }    
     }
 }

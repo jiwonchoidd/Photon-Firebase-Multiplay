@@ -180,13 +180,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
         {
             gameStartbtn.enabled = false;
+            gameStartbtn.image = null;
             Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
             return; 
         }
 
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
-            Debug.Log("È¥ÀÚ ¹¹ÇÒ¶ó°í");
+            Debug.Log("È¥ÀÚÀÔ´Ï´Ù..");
         }
         else
         {

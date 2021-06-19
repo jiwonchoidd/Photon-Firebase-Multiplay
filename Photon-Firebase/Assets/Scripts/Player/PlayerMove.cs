@@ -34,9 +34,13 @@ public class PlayerMove : MonoBehaviour
         print("현재 체력: " + healthPoint);
     }
 
+ 
+
     private void LateUpdate()
     {
-        // 사용자의 입력을 받는다.
+        if (!GameManager.instance.ISDEAD)
+        {
+            // 사용자의 입력을 받는다.
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -95,5 +99,10 @@ public class PlayerMove : MonoBehaviour
 
         cc.Move(dir * moveSpeed * Time.deltaTime);
     }
+
+
+        }
+
+
 
 }
