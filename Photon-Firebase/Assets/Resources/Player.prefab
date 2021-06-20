@@ -392,12 +392,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2363e64ccba0b4d8c40fdef3d27c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  firePosition: {fileID: 0}
-  fireEffect: {fileID: 0}
+  firePosition: {fileID: 3244482698550638121}
   attackPower: 3
   anim: {fileID: 6232918382501296580}
   PV: {fileID: 5659157623163790577}
+  effectFactory: {fileID: 2675327229079291333, guid: 8b1da598d683f444388f7a8bb779d0c2, type: 3}
   knifeDistance: 1.5
 --- !u!114 &5659157623163790577
 MonoBehaviour:
@@ -437,7 +436,6 @@ MonoBehaviour:
   camara: {fileID: 3244482699547730470}
   hand: {fileID: 3244482700282296244}
   PV: {fileID: 5659157623163790577}
-  healthPoint: 1
   playerDamage: 0
 --- !u!95 &6232918382501296580
 Animator:

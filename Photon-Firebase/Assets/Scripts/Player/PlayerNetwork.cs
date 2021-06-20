@@ -10,12 +10,42 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     public PhotonView PV;
     private Vector3 curPos;
     [SerializeField]
-    private float healthPoint = 1;
-    private float healthPoint_Other = 1;
     public float playerDamage;
     private Quaternion curRot;
-   // private CharacterController cc;
+    // private CharacterController cc;
     //private Vector3 curPos;
+
+    float _hp = 1;
+    public float HP
+    {
+        get
+        {
+            return _hp;
+        }
+        set
+        {
+            _hp = value;
+            if (PV.IsMine)
+            {
+                healthSlider.value = _hp;
+            }
+            if(_hp<=0)
+            {
+                // 나 일때만 처리하도록 함
+                if(PV.IsMine)
+                {
+                    
+                //1. 죽어야하는  녀석이 마스터 클라이언트라면? 다른녀석한테 마스터클라이언트 권한 넘긴다.
+                if(PhotonNetwork.IsMasterClient)
+                {
+                    PhotonNetwork.SetMasterClient(PhotonNetwork.MasterClient.GetNext());
+                }
+                //방 나가도 됨..
+                Dead();
+                }
+            }
+        }
+    }
 
     void Awake()
     {
@@ -32,9 +62,8 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         }
         else
         {
-            Destroy(camara);
+            camara.SetActive(false);
             //내 캐릭터가 아니라면
-            this.GetComponent<PlayerFire>().enabled = false;
             this.GetComponent<PlayerMove>().enabled = false;
             this.GetComponent<PlayerRotation>().enabled = false;
             hand.layer = 3;
@@ -76,34 +105,11 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     }
     public void OutofWorld()
     {
-        healthPoint = 0;
-        //healthSlider.value = healthPoint;
-        if (healthPoint <= 0)
-        {
-            Dead();
-        }
+        HP=0;
     }
     #endregion
 
     #region 피격 죽음 등등
-    public void Hit()
-    {
-        if(PV.IsMine)
-        {
-
-        }
-        else
-        {
-            //상대방에 떄려야 호출됨
-            healthPoint = healthPoint_Other;
-            healthPoint -= 0.1f;
-            //healthSlider.value= healthPoint;
-            if(healthPoint<=0)
-            {
-                Dead();
-            }
-        }
-    }
 
     private void Dead()
     {
@@ -127,13 +133,11 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         if (stream.IsWriting)
         {
             stream.SendNext(transform.position);
-            stream.SendNext(healthPoint);
             stream.SendNext(transform.rotation);
         }
         else
         {
             curPos = (Vector3)stream.ReceiveNext();
-            healthPoint_Other = (float)stream.ReceiveNext();
             curRot = (Quaternion)stream.ReceiveNext();
         }
     }
