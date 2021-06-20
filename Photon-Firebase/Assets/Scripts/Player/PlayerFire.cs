@@ -24,8 +24,6 @@ public class PlayerFire : MonoBehaviourPun
     {
         if(PV.IsMine)
         {
-
-        }
             if (Input.GetButtonDown("Fire2"))
             {
                //
@@ -72,6 +70,8 @@ public class PlayerFire : MonoBehaviourPun
                 }
 
             }
+
+        }
         // 만일, 마우스 우 클릭을 하면...
     }
 
