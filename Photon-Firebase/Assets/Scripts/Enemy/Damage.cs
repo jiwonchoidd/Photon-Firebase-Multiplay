@@ -21,7 +21,7 @@ public class Damage : MonoBehaviour
 
         int finalDamage = (int)(efsm.attackPower * damageRate);
 
-        pm.ApplyDamage(finalDamage);
+        
         //print("플레이어는 " + finalDamage.ToString() + "의 피해를 입었습니다!");
     }
 }

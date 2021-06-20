@@ -32,6 +32,7 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -312,8 +313,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3938}
     - Class: 114
       Script: {instanceID: 4484}
-    - Class: 114
-      Script: {instanceID: 4782}
     - Class: 114
       Script: {instanceID: 4938}
     - Class: 114
@@ -790,7 +789,7 @@ ScriptsOnlyBuild:
     className: ButtonSound
   - hash:
       serializedVersion: 2
-      Hash: b29135bad09f426326e62e287e00c57d
+      Hash: 080dd1fef4db348f97f83375765ff78f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerNetwork
@@ -1552,7 +1551,7 @@ ScriptsOnlyBuild:
     className: RegionListCell
   - hash:
       serializedVersion: 2
-      Hash: 9f76eacb9379beec7ff41e1a20b397a9
+      Hash: e25194a8185bc407929f58791084651a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerFire
@@ -2020,7 +2019,7 @@ ScriptsOnlyBuild:
     className: LoadLevelUIForm
   - hash:
       serializedVersion: 2
-      Hash: b9203d8d981164d12fc3b2b437bf35b4
+      Hash: cc732572f3ee5b341e45d9e8e51a4941
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMove

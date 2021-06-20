@@ -257,7 +257,6 @@ GameObject:
   - component: {fileID: 3244482699865702638}
   - component: {fileID: 5659157623163790577}
   - component: {fileID: 2365892407950888782}
-  - component: {fileID: 7973671227438186968}
   - component: {fileID: 6232918382501296580}
   m_Layer: 3
   m_Name: Player
@@ -366,7 +365,6 @@ MonoBehaviour:
   jumpPower: 1.5
   jumpCount: 1
   gravity: -5
-  healthPoint: 100
 --- !u!114 &3244482699865702639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +396,8 @@ MonoBehaviour:
   firePosition: {fileID: 0}
   fireEffect: {fileID: 0}
   attackPower: 3
-  anim: {fileID: 0}
+  anim: {fileID: 6232918382501296580}
+  PV: {fileID: 5659157623163790577}
   knifeDistance: 1.5
 --- !u!114 &5659157623163790577
 MonoBehaviour:
@@ -419,7 +418,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 7973671227438186968}
+  - {fileID: 2365892407950888782}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -437,22 +436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camara: {fileID: 3244482699547730470}
   hand: {fileID: 3244482700282296244}
---- !u!114 &7973671227438186968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3244482699865702629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
+  PV: {fileID: 5659157623163790577}
+  healthPoint: 1
+  playerDamage: 0
 --- !u!95 &6232918382501296580
 Animator:
   serializedVersion: 3

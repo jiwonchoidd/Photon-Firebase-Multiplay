@@ -19,20 +19,14 @@ public class PlayerMove : MonoBehaviour
     [Header("그 외")]
     CharacterController cc;
     bool isjumping = false;
-    public int healthPoint = 100;
+
 
     void Start()
     {
         cc = transform.GetComponent<CharacterController>();
     }
 
-    public void ApplyDamage(int val)
-    {
-        healthPoint -= val;
-        healthPoint = Mathf.Max(healthPoint, 0);
-
-        print("현재 체력: " + healthPoint);
-    }
+ 
 
  
 

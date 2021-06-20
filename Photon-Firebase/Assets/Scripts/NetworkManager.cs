@@ -90,6 +90,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         //불값 로비인 경우만 바로 시작시 연결 시도
         if(isLobby)
         Connect();
+        //포톤이 씬을 로드함
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
     void Awake() => Screen.SetResolution(960, 540, false);
 
@@ -97,8 +99,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
         LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
-
-        
     }
 
     public void Connect() => PhotonNetwork.ConnectUsingSettings();
@@ -152,7 +152,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             readybtn.gameObject.SetActive(false);
             gameStartbtn.gameObject.SetActive(true);
-            PV.RPC("ReadyResetRPC", RpcTarget.All);
         }
         else
         {
@@ -224,7 +223,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void GameStart()
     {
         //모두 같은 씬으로 이동하게 됨...
-        PhotonNetwork.AutomaticallySyncScene= true;
+        
         //마스터만 할수 있음 
 
         if (!PhotonNetwork.IsMasterClient)
@@ -232,17 +231,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             gameStartbtn.enabled = false;
             gameStartbtn.image = null;
             Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
-            return; 
+            return;
         }
-
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        else if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             Debug.Log("혼자입니다..");
         }
         else
         {
             // 레디한 사람과 현재 사람 수가 같다면??
-            if(PhotonNetwork.PlayerList.Length-1==readyPlayers)
+            if(PhotonNetwork.CurrentRoom.PlayerCount-1 == readyPlayers)
             {
             Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
             PhotonNetwork.LoadLevel("Play");
