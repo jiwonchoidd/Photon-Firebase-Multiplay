@@ -8,6 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    [Header("ErrorPanel")]
+    public GameObject errorPanel;
+    public Text errorText;
+
+    [Header("LobbyPanel")]
+    public Text WelcomeText2;
+
     [Header("LobbyPanel")]
     public GameObject LobbyPanel;
     public InputField RoomInput;
@@ -87,8 +94,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        RoomPanel.SetActive(false);
+        LobbyPanel.SetActive(false);
+        errorPanel.SetActive(false);
         //불값 로비인 경우만 바로 시작시 연결 시도
-        if(isLobby)
+        if (isLobby)
         Connect();
         //포톤이 씬을 로드함
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -107,12 +117,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        // 로비 패널 켜짐
-        LobbyPanel.SetActive(true);
-        RoomPanel.SetActive(false);
         //캐릭터 이름 설정!!
         PhotonNetwork.LocalPlayer.NickName = Autonaming();
-        WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
+        WelcomeText.text = PhotonNetwork.LocalPlayer.NickName;
+        WelcomeText2.text = "Welcome, " + WelcomeText.text;
 
         //리스트 초기화
         myList.Clear();
@@ -121,7 +129,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         // 이메일에서 이름 뺴올꺼임
     private string Autonaming()
     {
-        if(AuthManager.User.Email=="")
+        if(AuthManager.User.Email==null)
         {
             string tempname = "Player";
             return tempname;
@@ -180,7 +188,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     public void LeaveRoom()
     {
-         PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LeaveRoom();
+        RoomPanel.SetActive(false);
         PV.RPC("ReadyResetRPC", RpcTarget.All);
     }
 
@@ -264,8 +273,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ListText.text = "";
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-            ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
-        RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "명 / " + PhotonNetwork.CurrentRoom.MaxPlayers + "최대";
+            ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : "\n");
+        RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + " Player / " +PhotonNetwork.CurrentRoom.MaxPlayers+ " MAX";
     }
     #endregion
 
@@ -273,6 +282,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #region 채팅
     public void Send()
     {
+        if(ChatInput.text=="")
+        {
+            //만약에 그냥 공백으로 채팅치면
+            return;
+        }
         PV.RPC("ChatRPC", RpcTarget.All, PhotonNetwork.NickName + " : " + ChatInput.text);
         ChatInput.text = "";
     }
@@ -348,7 +362,4 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-    #region 인게임
-
-    #endregion
 }

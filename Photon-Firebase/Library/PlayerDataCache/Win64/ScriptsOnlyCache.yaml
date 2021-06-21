@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - PlayerRotation
     - SFX
     - SceneCheck
+    - SettingManager
     Cinemachine.dll:
     - Cinemachine.CinemachineBasicMultiChannelPerlin
     - Cinemachine.CinemachineBrain
@@ -145,29 +146,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1610}
@@ -221,11 +214,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5190}
     - Class: 114
       Script: {instanceID: 5212}
+    - Class: 114
+      Script: {instanceID: 135682}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -730,7 +723,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsVisibleProperty
   - hash:
       serializedVersion: 2
-      Hash: 9b34551caa37780f5673cd314e7a2605
+      Hash: 08beb564bc1e94ad65ae98cb7584efe0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NetworkManager
@@ -2180,6 +2173,18 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 76ca1d3051cd08878d6cabedf017502d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DirectionAction
+  - hash:
+      serializedVersion: 2
+      Hash: dbe77cf59fc5465281321fe4f1130457
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Signin.unity
