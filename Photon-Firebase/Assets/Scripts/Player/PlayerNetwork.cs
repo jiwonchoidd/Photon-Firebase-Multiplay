@@ -1,6 +1,8 @@
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using StarterAssets;
+
 public class PlayerNetwork : MonoBehaviourPun, IPunObservable
 {
     public GameObject camara;
@@ -58,14 +60,13 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         if(PV.IsMine)
         {
             //내 캐릭터라면 몸뚱아리가 안보여져도됨
-            healthSlider = GameObject.Find("Canvas_PlayerUI").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
+            healthSlider = GameObject.Find("Canvas").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
         }
         else
         {
             camara.SetActive(false);
             //내 캐릭터가 아니라면
-            this.GetComponent<PlayerMove>().enabled = false;
-            this.GetComponent<PlayerRotation>().enabled = false;
+            this.GetComponent<ThirdPersonController>().enabled = false;
             hand.layer = 3;
         }
                         
@@ -113,7 +114,6 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
 
     private void Dead()
     {
-        GameObject.Find("DieCamera").GetComponent<AudioListener>().enabled = true;
         GameObject.Find("Canvas_Die").transform.Find("Panel_Respawn").gameObject.SetActive(true);
         //복제 버그 막기위해 올 버퍼드
         PV.RPC("DestroyRPC", RpcTarget.AllBuffered);
@@ -123,8 +123,10 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     }
 
     [PunRPC]
-    void DestroyRPC() => Destroy(gameObject);
-   
+    void DestroyRPC()
+    {
+        gameObject.SetActive(false);
+    }
 
     #endregion
 

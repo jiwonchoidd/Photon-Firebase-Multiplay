@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         // 플레이어 생성 
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition.position, spawnPosition.rotation);
 
-        dieCamera.GetComponent<AudioListener>().enabled = false;
+   
 
     }
 
