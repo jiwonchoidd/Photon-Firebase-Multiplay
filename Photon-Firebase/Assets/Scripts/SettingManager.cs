@@ -8,8 +8,6 @@ public class SettingManager : MonoBehaviour
     // 오디오
     public Slider BGMvol;
     public Slider Effectvol;
-    // 비디오
-    public 
     // 마우스
 
     public GameObject panelSetting;
