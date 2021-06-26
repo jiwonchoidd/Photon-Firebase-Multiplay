@@ -29,6 +29,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text ListText;
     public Text RoomInfoText;
     public Text[] ChatText;
+    public Text readyInfoText;
     public InputField ChatInput;
     public Button gameStartbtn;
     public Button readybtn;
@@ -89,7 +90,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-
     #region 서버연결
 
     private void Start()
@@ -103,12 +103,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         //포톤이 씬을 로드함
         PhotonNetwork.AutomaticallySyncScene = true;
     }
-    void Awake() => Screen.SetResolution(960, 540, false);
+   // void Awake() => Screen.SetResolution(960, 540, false);
 
     void Update()
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
-        LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
+        LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "Robby / " + PhotonNetwork.CountOfPlayers + "Connected";
     }
 
     public void Connect() => PhotonNetwork.ConnectUsingSettings();
@@ -150,7 +150,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomPanel.SetActive(false);
     }
     #endregion
-
 
     #region 방
     public void CreateRoom()
@@ -218,13 +217,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         RoomRenewal();
-        ChatRPC("<color=yellow>" + newPlayer.NickName + "님이 참가하셨습니다</color>");
+        ChatRPC("<color=yellow>" +"Hello "+newPlayer.NickName +". </color>");
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         RoomRenewal();
-        ChatRPC("<color=yellow>" + otherPlayer.NickName + "님이 퇴장하셨습니다</color>");
+        ChatRPC("<color=yellow>" + otherPlayer.NickName + " leave room. </color>");
     }
 
 
@@ -232,7 +231,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void GameStart()
     {
         //모두 같은 씬으로 이동하게 됨...
-        
+
         //마스터만 할수 있음 
 
         if (!PhotonNetwork.IsMasterClient)
@@ -245,19 +244,24 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         else if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             Debug.Log("혼자입니다..");
+
+            errorPanel.SetActive(true);
+            errorText.text = "There are no players.";
         }
         else
         {
             // 레디한 사람과 현재 사람 수가 같다면??
-            if(PhotonNetwork.CurrentRoom.PlayerCount-1 == readyPlayers)
+            if (PhotonNetwork.CurrentRoom.PlayerCount - 1 == readyPlayers)
             {
-            Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
-            PhotonNetwork.LoadLevel("Play");
+                Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
+                PhotonNetwork.LoadLevel("Play");
             }
             else
             {
                 //레디가 안되었음 
                 Debug.Log("no ready");
+                errorPanel.SetActive(true);
+                errorText.text = "There's a player who is not ready.";
             }
         }
     }
@@ -275,9 +279,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
             ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : "\n");
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + " Player / " +PhotonNetwork.CurrentRoom.MaxPlayers+ " MAX";
+
+        readyInfoText.text = "Player " +readyPlayers+" ready.";
     }
     #endregion
-
 
     #region 채팅
     public void Send()
@@ -317,18 +322,20 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void ReadyRPC()
     {
         readyPlayers += 1;
+        RoomRenewal();
     }
     [PunRPC] // RPC는 플레이어가 속해있는 방 모든 인원에게 전달한다
     void UnReadyRPC()
     {
         readyPlayers -= 1;
+        RoomRenewal();
     }
     [PunRPC]
     void ReadyResetRPC()
     {
         readyPlayers = 0;
         isReady = false;
-        readybtn.gameObject.GetComponentInChildren<Text>().text = "unReady";
+        readybtn.gameObject.GetComponentInChildren<Text>().text = "Ready?";
     }
 
 
@@ -345,8 +352,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             isReady = false;
             PV.RPC("UnReadyRPC", RpcTarget.All);
             readybtn.interactable = false;
-            readybtn.gameObject.GetComponentInChildren<Text>().text = "unReady";
-            yield return new WaitForSeconds(0.2f);
+            readybtn.gameObject.GetComponentInChildren<Text>().text = "Ready?";
+            yield return new WaitForSeconds(0.5f);
             readybtn.interactable = true;
         }
         else
@@ -355,8 +362,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             isReady = true;
             PV.RPC("ReadyRPC", RpcTarget.All);
             readybtn.interactable = false;
-            readybtn.gameObject.GetComponentInChildren<Text>().text = "Ready";
-            yield return new WaitForSeconds(0.2f);
+            readybtn.gameObject.GetComponentInChildren<Text>().text = "Wait";
+            yield return new WaitForSeconds(0.5f);
             readybtn.interactable = true;
         }
     }
