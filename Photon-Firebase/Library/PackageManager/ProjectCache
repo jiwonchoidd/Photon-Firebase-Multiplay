@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637599615219851315
+      ticks: 637599786608891940
     m_Hash: 2276027713
   m_LockFileStatus:
     m_FilePath: E:/github/Photon-Firebase-Multiplay/Photon-Firebase/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637599615220788822
+      ticks: 637599786608901898
     m_Hash: 922845437
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

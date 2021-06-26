@@ -1039,6 +1039,7 @@ GameObject:
   - component: {fileID: 1370707352593272109}
   - component: {fileID: 1370707352593272108}
   - component: {fileID: 1370707352593272107}
+  - component: {fileID: 2124256133499164631}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1335,6 +1336,22 @@ MonoBehaviour:
   PV: {fileID: 1370707352593272109}
   effectFactory: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
   knifeDistance: 1.5
+--- !u!114 &2124256133499164631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335383701132727070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1 &3406297680249997773
 GameObject:
   m_ObjectHideFlags: 0
