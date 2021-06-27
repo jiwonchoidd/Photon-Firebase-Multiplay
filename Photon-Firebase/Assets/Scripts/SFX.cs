@@ -27,12 +27,17 @@ public class SFX : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
         ad = GetComponent<AudioSource>();
-
+        ad.volume = PlayerPrefs.GetFloat("effectvol");
     }
 
     internal void Play()
     {
         if(!ad.isPlaying)
         ad.Play();
+    }
+
+    public void VolChange(float i)
+    {
+        ad.volume = i;
     }
 }
