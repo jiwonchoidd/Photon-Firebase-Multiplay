@@ -8,6 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    [Header("ErrorPanel")]
+    public GameObject errorPanel;
+    public Text errorText;
+
+    [Header("LobbyPanel")]
+    public Text WelcomeText2;
+
     [Header("LobbyPanel")]
     public GameObject LobbyPanel;
     public InputField RoomInput;
@@ -22,8 +29,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text ListText;
     public Text RoomInfoText;
     public Text[] ChatText;
+    public Text readyInfoText;
     public InputField ChatInput;
     public Button gameStartbtn;
+    public Button readybtn;
 
     [Header("ETC")]
     public Text StatusText;
@@ -33,8 +42,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     int currentPage = 1, maxPage, multiple;
 
     public bool isLobby;
-    public bool isReady;
-
+    public int readyPlayers=0;
+    private bool isReady;
+ 
     #region 방리스트 갱신
     // ◀버튼 -2 , ▶버튼 -1 , 셀 숫자
     public void MyListClick(int num)
@@ -80,21 +90,25 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-
     #region 서버연결
 
     private void Start()
     {
+        RoomPanel.SetActive(false);
+        LobbyPanel.SetActive(false);
+        errorPanel.SetActive(false);
         //불값 로비인 경우만 바로 시작시 연결 시도
-        if(isLobby)
+        if (isLobby)
         Connect();
+        //포톤이 씬을 로드함
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
-    void Awake() => Screen.SetResolution(960, 540, false);
+   // void Awake() => Screen.SetResolution(960, 540, false);
 
     void Update()
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
-        LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
+        LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "Robby / " + PhotonNetwork.CountOfPlayers + "Connected";
     }
 
     public void Connect() => PhotonNetwork.ConnectUsingSettings();
@@ -103,12 +117,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        // 로비 패널 켜짐
-        LobbyPanel.SetActive(true);
-        RoomPanel.SetActive(false);
         //캐릭터 이름 설정!!
         PhotonNetwork.LocalPlayer.NickName = Autonaming();
-        WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
+        WelcomeText.text = PhotonNetwork.LocalPlayer.NickName;
+        WelcomeText2.text = "Welcome, " + WelcomeText.text;
 
         //리스트 초기화
         myList.Clear();
@@ -117,7 +129,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         // 이메일에서 이름 뺴올꺼임
     private string Autonaming()
     {
-        if(AuthManager.User.Email=="")
+        if(AuthManager.User.Email==null)
         {
             string tempname = "Player";
             return tempname;
@@ -139,13 +151,46 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-
     #region 방
-    public void CreateRoom() => PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 4 });
-
-    public void JoinRandomRoom() => PhotonNetwork.JoinRandomRoom();
-
-    public void LeaveRoom() => PhotonNetwork.LeaveRoom();
+    public void CreateRoom()
+    {
+        PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 4 });
+        if(PhotonNetwork.IsMasterClient)
+        {
+            readybtn.gameObject.SetActive(false);
+            gameStartbtn.gameObject.SetActive(true);
+        }
+        else
+        {
+            readybtn.gameObject.SetActive(true);
+            gameStartbtn.gameObject.SetActive(false);
+            PV.RPC("ReadyResetRPC", RpcTarget.All);
+        }
+    }
+    public void JoinRandomRoom()
+    {
+        PhotonNetwork.JoinRandomRoom();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            readybtn.gameObject.SetActive(false);
+            gameStartbtn.gameObject.SetActive(true);
+            PV.RPC("UnReadyRPC", RpcTarget.All);
+            PV.RPC("ReadyResetRPC", RpcTarget.All);
+        }
+        else
+        {
+            readybtn.gameObject.SetActive(true);
+            gameStartbtn.gameObject.SetActive(false);
+            PV.RPC("UnReadyRPC", RpcTarget.All);
+            PV.RPC("ReadyResetRPC", RpcTarget.All);
+        }
+    }
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+        RoomPanel.SetActive(false);
+        PV.RPC("ReadyResetRPC", RpcTarget.All);
+    }
 
     public override void OnJoinedRoom()
     {
@@ -153,6 +198,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomRenewal();
         ChatInput.text = "";
         for (int i = 0; i < ChatText.Length; i++) ChatText[i].text = "";
+        if (PhotonNetwork.IsMasterClient)
+        {
+            readybtn.gameObject.SetActive(false);
+            gameStartbtn.gameObject.SetActive(true);
+        }
+        else
+        {
+            readybtn.gameObject.SetActive(true);
+            gameStartbtn.gameObject.SetActive(false);
+        }
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message) { RoomInput.text = ""; CreateRoom(); }
@@ -162,36 +217,52 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         RoomRenewal();
-        ChatRPC("<color=yellow>" + newPlayer.NickName + "님이 참가하셨습니다</color>");
+        ChatRPC("<color=yellow>" +"Hello "+newPlayer.NickName +". </color>");
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         RoomRenewal();
-        ChatRPC("<color=yellow>" + otherPlayer.NickName + "님이 퇴장하셨습니다</color>");
+        ChatRPC("<color=yellow>" + otherPlayer.NickName + " leave room. </color>");
     }
 
+
+    //게임 시작!!!!
     public void GameStart()
     {
         //모두 같은 씬으로 이동하게 됨...
-        PhotonNetwork.AutomaticallySyncScene= true;
+
         //마스터만 할수 있음 
 
         if (!PhotonNetwork.IsMasterClient)
         {
             gameStartbtn.enabled = false;
+            gameStartbtn.image = null;
             Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
-            return; 
+            return;
         }
-
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        else if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
-            Debug.Log("혼자 뭐할라고");
+            Debug.Log("혼자입니다..");
+
+            errorPanel.SetActive(true);
+            errorText.text = "There are no players.";
         }
         else
         {
-            Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
-            PhotonNetwork.LoadLevel("Play");
+            // 레디한 사람과 현재 사람 수가 같다면??
+            if (PhotonNetwork.CurrentRoom.PlayerCount - 1 == readyPlayers)
+            {
+                Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
+                PhotonNetwork.LoadLevel("Play");
+            }
+            else
+            {
+                //레디가 안되었음 
+                Debug.Log("no ready");
+                errorPanel.SetActive(true);
+                errorText.text = "There's a player who is not ready.";
+            }
         }
     }
 
@@ -206,15 +277,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ListText.text = "";
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-            ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
-        RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "명 / " + PhotonNetwork.CurrentRoom.MaxPlayers + "최대";
+            ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : "\n");
+        RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + " Player / " +PhotonNetwork.CurrentRoom.MaxPlayers+ " MAX";
+
+        readyInfoText.text = "Player " +readyPlayers+" ready.";
     }
     #endregion
-
 
     #region 채팅
     public void Send()
     {
+        if(ChatInput.text=="")
+        {
+            //만약에 그냥 공백으로 채팅치면
+            return;
+        }
         PV.RPC("ChatRPC", RpcTarget.All, PhotonNetwork.NickName + " : " + ChatInput.text);
         ChatInput.text = "";
     }
@@ -238,8 +315,58 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
+    #region 레디
 
-    #region 인게임
+    //레디를 하면 
+    [PunRPC] // RPC는 플레이어가 속해있는 방 모든 인원에게 전달한다
+    void ReadyRPC()
+    {
+        readyPlayers += 1;
+        RoomRenewal();
+    }
+    [PunRPC] // RPC는 플레이어가 속해있는 방 모든 인원에게 전달한다
+    void UnReadyRPC()
+    {
+        readyPlayers -= 1;
+        RoomRenewal();
+    }
+    [PunRPC]
+    void ReadyResetRPC()
+    {
+        readyPlayers = 0;
+        isReady = false;
+        readybtn.gameObject.GetComponentInChildren<Text>().text = "Ready?";
+    }
 
+
+    public void OnclickReady()
+    {
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        if(isReady)
+        {
+            Debug.Log("레디풀림");
+            isReady = false;
+            PV.RPC("UnReadyRPC", RpcTarget.All);
+            readybtn.interactable = false;
+            readybtn.gameObject.GetComponentInChildren<Text>().text = "Ready?";
+            yield return new WaitForSeconds(0.5f);
+            readybtn.interactable = true;
+        }
+        else
+        {
+            Debug.Log("레디누름");
+            isReady = true;
+            PV.RPC("ReadyRPC", RpcTarget.All);
+            readybtn.interactable = false;
+            readybtn.gameObject.GetComponentInChildren<Text>().text = "Wait";
+            yield return new WaitForSeconds(0.5f);
+            readybtn.interactable = true;
+        }
+    }
     #endregion
+
 }

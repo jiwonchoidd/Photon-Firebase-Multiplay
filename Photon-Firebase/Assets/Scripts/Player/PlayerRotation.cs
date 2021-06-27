@@ -19,6 +19,9 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!GameManager.instance.ISDEAD)
+        {
+
         // 마우스의 드래그 방향 입력을 받는다.
         float x = Input.GetAxis("Mouse X");
         float y = Input.GetAxis("Mouse Y");
@@ -67,5 +70,6 @@ public class PlayerRotation : MonoBehaviour
         Vector3 dir = new Vector3(-rotY, rotX, 0);
 
         transform.localEulerAngles = dir;
+        }
     }
 }

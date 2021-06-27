@@ -19,24 +19,22 @@ public class PlayerMove : MonoBehaviour
     [Header("그 외")]
     CharacterController cc;
     bool isjumping = false;
-    public int healthPoint = 100;
+
 
     void Start()
     {
         cc = transform.GetComponent<CharacterController>();
     }
 
-    public void ApplyDamage(int val)
-    {
-        healthPoint -= val;
-        healthPoint = Mathf.Max(healthPoint, 0);
+ 
 
-        print("현재 체력: " + healthPoint);
-    }
+ 
 
     private void LateUpdate()
     {
-        // 사용자의 입력을 받는다.
+        if (!GameManager.instance.ISDEAD)
+        {
+            // 사용자의 입력을 받는다.
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -95,5 +93,10 @@ public class PlayerMove : MonoBehaviour
 
         cc.Move(dir * moveSpeed * Time.deltaTime);
     }
+
+
+        }
+
+
 
 }
