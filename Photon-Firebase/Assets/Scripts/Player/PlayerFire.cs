@@ -22,6 +22,7 @@ namespace StarterAssets
         void Start()
         {
             _input = GetComponent<StarterAssetsInputs>();
+            anim = GetComponent<Animator>();
         }
 
         void Update()
@@ -33,6 +34,7 @@ namespace StarterAssets
                 // 만일, 마우스 좌 클릭을 하면...
                 if (_input.fire)
                 {
+                    anim.SetTrigger("Attack");
                     // 레이를 생성하고 카메라의 정면 방향으로 발사하고 싶다.
                     Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 

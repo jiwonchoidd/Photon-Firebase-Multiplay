@@ -14,6 +14,8 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     [SerializeField]
     public float playerDamage;
     private Quaternion curRot;
+
+    public GameObject skeleton;
     // private CharacterController cc;
     //private Vector3 curPos;
 
@@ -61,6 +63,8 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         {
             //내 캐릭터라면 몸뚱아리가 안보여져도됨
             healthSlider = GameObject.Find("Canvas").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
+            setRigidbodyState(true);
+            setColliderState(false);
         }
         else
         {
@@ -68,6 +72,8 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             //내 캐릭터가 아니라면
             this.GetComponent<ThirdPersonController>().enabled = false;
             hand.layer = 3;
+            setRigidbodyState(true);
+            setColliderState(false);
         }
                         
         
@@ -114,10 +120,10 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
 
     private void Dead()
     {
-        GameObject.Find("Canvas_Die").transform.Find("Panel_Respawn").gameObject.SetActive(true);
+        //GameObject.Find("Canvas_Die").transform.Find("Panel_Respawn").gameObject.SetActive(true);
         //복제 버그 막기위해 올 버퍼드
         PV.RPC("DestroyRPC", RpcTarget.AllBuffered);
-        animator.SetBool("isDead", true);
+        //animator.SetBool("isDead", true);
         GameManager.instance.ISDEAD = true;
         //죽으면 카메라 삭제되어서 기본 카메라 켜줌
     }
@@ -125,7 +131,30 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     [PunRPC]
     void DestroyRPC()
     {
-        gameObject.SetActive(false);
+        gameObject.GetComponent<Animator>().enabled = false;
+        Destroy(gameObject, 5f);
+        setRigidbodyState(false);
+        setColliderState(true);
+    }
+
+    void setRigidbodyState(bool state)
+    {
+        Rigidbody[] rigidbodies = skeleton.GetComponentsInChildren<Rigidbody>();
+        foreach(Rigidbody rigidbody in rigidbodies)
+        {
+            rigidbody.isKinematic = state;
+        }
+        //GetComponent<Rigidbody>().isKinematic = !state;
+    }
+
+    void setColliderState(bool state)
+    {
+        Collider[] colliders = skeleton.GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled= state;
+        }
+        //GetComponent<Collider>().enabled = !state;
     }
 
     #endregion

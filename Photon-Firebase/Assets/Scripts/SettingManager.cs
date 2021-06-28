@@ -26,6 +26,8 @@ public class SettingManager : MonoBehaviour
     public GameObject panelSetting;
     void Start()
     {
+        //화면 안꺼지게
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         panelSetting.SetActive(false);
         HasKey();
         LoadSetting();
@@ -76,27 +78,27 @@ public class SettingManager : MonoBehaviour
     void HasKey()
     {
         //int
-        InitSettingi("fullscreen");
-        InitSettingi("resolution");
+        InitSettingi("fullscreen", 1);
+        InitSettingi("resolution", 1);
         //float
-        InitSettingf("bgmvol");
-        InitSettingf("effectvol");
-        InitSettingf("fov");
-        InitSettingf("mousesen");
+        InitSettingf("bgmvol", 1);
+        InitSettingf("effectvol",1);
+        InitSettingf("fov", 60);
+        InitSettingf("mousesen", 60);
         PlayerPrefs.Save();
     }
-    void InitSettingf(string name)
+    void InitSettingf(string name, float i)
     {
         if (!PlayerPrefs.HasKey(name))
         {
-            PlayerPrefs.SetFloat(name,1);
+            PlayerPrefs.SetFloat(name,i);
         }
     }
-    void InitSettingi(string name)
+    void InitSettingi(string name, int i)
     {
         if (!PlayerPrefs.HasKey(name))
         {
-            PlayerPrefs.SetInt(name, 1);
+            PlayerPrefs.SetInt(name, i);
         }
     }
     #endregion

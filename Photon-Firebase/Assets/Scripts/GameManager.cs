@@ -9,10 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     public GameObject playerPrefab;
-    public GameObject dieCamera;
-
-    public Text tx_time;
-    public Text tx_alert;
+    public Text introText;
     public Transform[] spawnPositions;
 
 
@@ -35,8 +32,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        //인원 수 만큼 시작 시 플레이어 소환
         SpawnPlayer();
-        
     }
     
 
@@ -52,9 +49,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         var spawnPosition = spawnPositions[localPlayerIndex];
         // 플레이어 생성 
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition.position, spawnPosition.rotation);
-
-   
-
     }
 
     #region 방 떠나기
