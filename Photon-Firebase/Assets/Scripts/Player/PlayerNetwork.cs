@@ -1,6 +1,8 @@
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 using StarterAssets;
 
 public class PlayerNetwork : MonoBehaviourPun, IPunObservable
@@ -14,12 +16,17 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     [SerializeField]
     public float playerDamage;
     private Quaternion curRot;
-
     public GameObject skeleton;
+    public GameObject img_hurt;
     // private CharacterController cc;
     //private Vector3 curPos;
 
     float _hp = 1;
+
+
+    private Vector3 impact = Vector3.zero;
+    private float mass=3.0f;
+
     public float HP
     {
         get
@@ -31,6 +38,10 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             _hp = value;
             if (PV.IsMine)
             {
+                if(healthSlider.value>_hp)
+                {
+                    if (!img_hurt.activeSelf) StartCoroutine(HurtImg());
+                }
                 healthSlider.value = _hp;
             }
             if(_hp<=0)
@@ -99,7 +110,14 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
                 transform.position = Vector3.Lerp(transform.position, curPos, Time.deltaTime * 10);
                 transform.rotation = Quaternion.Lerp(transform.rotation, curRot, Time.deltaTime * 10);
             }
+        
         }
+            //공격당함 임팩트를 적용할 부분
+            if (impact.magnitude > 0.2)
+            {
+                this.GetComponent<CharacterController>().Move(impact * Time.deltaTime);
+            }
+            impact = Vector3.Lerp(impact, Vector3.zero, 20 * Time.deltaTime);
     }
     #region 캐릭터가 콜라이더에 부딪혔을때의 처리
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -117,10 +135,23 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     #endregion
 
     #region 피격 죽음 등등
-
+    // 피격 당한 이미지 출력
+    IEnumerator HurtImg()
+    {
+        img_hurt.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        img_hurt.SetActive(false);
+    }
+    
+    public void AddImpact(Vector3 dir, float force)
+    {
+        dir.Normalize();
+        if (dir.y < 0)
+            dir.y = -dir.y; // reflect down force on the ground
+        impact += dir.normalized * force / mass;
+    }
     private void Dead()
     {
-        //GameObject.Find("Canvas_Die").transform.Find("Panel_Respawn").gameObject.SetActive(true);
         //복제 버그 막기위해 올 버퍼드
         PV.RPC("DestroyRPC", RpcTarget.AllBuffered);
         //animator.SetBool("isDead", true);
@@ -131,12 +162,17 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     [PunRPC]
     void DestroyRPC()
     {
+       //충돌 방지를 위해 캐릭터 컨트롤러를 꺼주고 애니메이션을 꺼줌 
+        gameObject.GetComponent<CharacterController>().enabled = false;
         gameObject.GetComponent<Animator>().enabled = false;
         Destroy(gameObject, 5f);
+
+        //래그돌 활성화 근데 밋밋해서 addforce 넣으면 좋을것같음
         setRigidbodyState(false);
         setColliderState(true);
     }
 
+    // ------래그돌 영역------
     void setRigidbodyState(bool state)
     {
         Rigidbody[] rigidbodies = skeleton.GetComponentsInChildren<Rigidbody>();

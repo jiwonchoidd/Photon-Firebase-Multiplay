@@ -1,11 +1,14 @@
 using UnityEngine;
 using Photon.Pun;
-
+using System;
+using System.Collections;
 
 namespace StarterAssets
 {
     public class PlayerFire : MonoBehaviourPun
     {
+
+
         // 마우스 우 클릭을 하면 총알이 발사되게 하고 싶다.
         // 필요 요소: 총알 오브젝트, 우클릭 입력, 발사 위치
 
@@ -27,10 +30,9 @@ namespace StarterAssets
 
         void Update()
         {
+            //공격
             if (PV.IsMine)
-            {
-
-                
+            { 
                 // 만일, 마우스 좌 클릭을 하면...
                 if (_input.fire)
                 {
@@ -65,7 +67,7 @@ namespace StarterAssets
                                 PhotonView enemy = hitInfo.transform.GetComponent<PhotonView>();
                                 if (enemy)
                                 {
-                                    enemy.RPC("Damage", RpcTarget.All, 0.1f);
+                                    enemy.RPC("Damage", RpcTarget.All, 0.1f , ray.direction);
                                 }
                             }
 
@@ -73,9 +75,8 @@ namespace StarterAssets
                     }
                     _input.fire = false;
                 }
-
             }
-            // 만일, 마우스 우 클릭을 하면...
+
         }
 
 
@@ -86,14 +87,18 @@ namespace StarterAssets
             GameObject knifeEffect = Instantiate(effectFactory);
             knifeEffect.transform.position = point;
             knifeEffect.transform.forward = normal;
-            Destroy(knifeEffect, 2);
+            Destroy(knifeEffect, 3);
         }
 
         [PunRPC]
-        void Damage(float value)
+        void Damage(float value, Vector3 dir)
         {
             //hp 감소
             this.GetComponent<PlayerNetwork>().HP -= value;
+
+            this.GetComponent<PlayerNetwork>().AddImpact(dir, 15);
         }
+
     }
+        
 }

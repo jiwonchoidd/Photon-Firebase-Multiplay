@@ -39,8 +39,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonAnimatorViewEditor
-    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -51,7 +49,6 @@ ScriptsOnlyBuild:
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.Editor.PlayerInputEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -118,6 +115,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -300,6 +299,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -961,7 +962,7 @@ ScriptsOnlyBuild:
     className: ButtonSound
   - hash:
       serializedVersion: 2
-      Hash: fc3bae783fe9dbd809645c4fffcd63d5
+      Hash: 80e9599e1fecc3ac268a0f3b2c248cbd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerNetwork
