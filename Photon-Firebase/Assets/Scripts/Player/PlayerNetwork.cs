@@ -72,10 +72,10 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     {
         if(PV.IsMine)
         {
-            //내 캐릭터라면 몸뚱아리가 안보여져도됨
-            healthSlider = GameObject.Find("Canvas").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
             setRigidbodyState(true);
             setColliderState(false);
+            //내 캐릭터라면 몸뚱아리가 안보여져도됨
+            healthSlider = GameObject.Find("Canvas").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
         }
         else
         {
