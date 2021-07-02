@@ -11,7 +11,7 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     public Slider healthSlider;
     public GameObject camara;
     public GameObject hand;
-    private Animator animator;
+    private string playerName;
     public PhotonView PV;
     private Vector3 curPos;
     [SerializeField]
@@ -63,12 +63,12 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
                 }
                 healthSlider.value = _hp;
             }
+            // 만약에 피가 0일때, 죽었을때
             if(_hp<=0)
             {
                 // 나 일때만 처리하도록 함
                 if(PV.IsMine)
                 {
-                    
                 //1. 죽어야하는  녀석이 마스터 클라이언트라면? 다른녀석한테 마스터클라이언트 권한 넘긴다.
                 if(PhotonNetwork.IsMasterClient)
                 {
@@ -96,7 +96,7 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             setRigidbodyState(true);
             setColliderState(false);
             //내 캐릭터라면 몸뚱아리가 안보여져도됨
-          
+            playerName = PhotonNetwork.LocalPlayer.NickName;
         }
         else
         {
@@ -111,8 +111,6 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             
         }
                         
-        
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -180,7 +178,9 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         PV.RPC("DestroyRPC", RpcTarget.AllBuffered);
         //animator.SetBool("isDead", true);
         GameManager.instance.ISDEAD = true;
-        //죽으면 카메라 삭제되어서 기본 카메라 켜줌
+        //킬로그!!!
+        KillLog.instance.KILLLOG = playerName;
+
     }
 
     [PunRPC]
@@ -189,7 +189,7 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
        //충돌 방지를 위해 캐릭터 컨트롤러를 꺼주고 애니메이션을 꺼줌 
         gameObject.GetComponent<CharacterController>().enabled = false;
         gameObject.GetComponent<Animator>().enabled = false;
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 6f);
 
         //래그돌 활성화 근데 밋밋해서 addforce 넣으면 좋을것같음
         setRigidbodyState(false);

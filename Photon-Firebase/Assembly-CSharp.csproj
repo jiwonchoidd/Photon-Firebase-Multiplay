@@ -65,12 +65,12 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\BGM.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
-    <Compile Include="Assets\Scripts\CameraFov.cs" />
+    <Compile Include="Assets\Scripts\Settings\CameraFov.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\OutofWorld.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
-    <Compile Include="Assets\Scripts\SettingManager.cs" />
+    <Compile Include="Assets\Scripts\Settings\SettingManager.cs" />
     <Compile Include="Assets\Unity_StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Unity_StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
@@ -81,7 +81,7 @@
     <Compile Include="Assets\Unity_StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Unity_StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\Scripts\NetworkManager.cs" />
+    <Compile Include="Assets\Scripts\Photon\NetworkManager.cs" />
     <Compile Include="Assets\Scripts\ButtonSound.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerNetwork.cs" />
     <Compile Include="Assets\Scripts\SceneCheck.cs" />
@@ -89,9 +89,9 @@
     <Compile Include="Assets\Unity_StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Unity_StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Photon\GameManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
-    <Compile Include="Assets\Scripts\AuthManager.cs" />
+    <Compile Include="Assets\Scripts\Photon\AuthManager.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Damage.cs" />
@@ -105,7 +105,7 @@
     <Compile Include="Assets\Scripts\SaveID.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\FakeWindow.cs" />
+    <Compile Include="Assets\Scripts\KillLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
