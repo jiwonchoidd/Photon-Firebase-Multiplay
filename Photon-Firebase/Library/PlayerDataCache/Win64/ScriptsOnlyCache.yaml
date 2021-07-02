@@ -96,7 +96,9 @@ ScriptsOnlyBuild:
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
     Unity.Timeline.Editor.dll:
     - TimelinePreferences
+    - UnityEditor.Timeline.EditorClip
     - UnityEditor.Timeline.SequenceHierarchy
+    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.ActivationPlayableAsset
@@ -151,8 +153,6 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -450,7 +450,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
     - Class: 320
+      Script: {instanceID: 0}
+    - Class: 850595691
       Script: {instanceID: 0}
     Assets/Scenes/Signin.unity:
     - Class: 1
@@ -2240,7 +2244,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFloatField
   - hash:
       serializedVersion: 2
-      Hash: 80e9599e1fecc3ac268a0f3b2c248cbd
+      Hash: aac411719d1938c0d9670bacdbb61bc8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerNetwork
@@ -2594,7 +2598,7 @@ ScriptsOnlyBuild:
     className: IsConnectedAndReadyProperty
   - hash:
       serializedVersion: 2
-      Hash: fb859f1b43a07c3ba9d41d5d59edf35a
+      Hash: 4505c2dd2070083e0c1faa8b5ac3d1bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

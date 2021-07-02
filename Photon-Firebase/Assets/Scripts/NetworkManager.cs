@@ -154,7 +154,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #region 방
     public void CreateRoom()
     {
-        PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 4 });
+        PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 5 });
         if(PhotonNetwork.IsMasterClient)
         {
             readybtn.gameObject.SetActive(false);
@@ -254,6 +254,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.CurrentRoom.PlayerCount - 1 == readyPlayers)
             {
                 Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
+
+                // 여기서 중요 한 것 비공개 방으로 해서 난입을 막아야함
+                PhotonNetwork.CurrentRoom.IsVisible = false;
                 PhotonNetwork.LoadLevel("Play");
             }
             else

@@ -2574,9 +2574,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1279471939}
+    - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: resetSignIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AuthManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141932275084854945, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5141932275788946539, guid: bbfb799859932934f859c9e0adf6a3b7, type: 3}
       propertyPath: m_Name
       value: ErrorCanvas

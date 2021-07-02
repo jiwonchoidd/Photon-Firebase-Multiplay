@@ -7,8 +7,9 @@ using StarterAssets;
 
 public class PlayerNetwork : MonoBehaviourPun, IPunObservable
 {
+    public GameObject playerCanvas;
+    public Slider healthSlider;
     public GameObject camara;
-    private Slider healthSlider;
     public GameObject hand;
     private Animator animator;
     public PhotonView PV;
@@ -18,6 +19,24 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     private Quaternion curRot;
     public GameObject skeleton;
     public GameObject img_hurt;
+    [SerializeField]
+    private bool isHuman=true;
+    public bool ISHUMAN
+    {
+        get
+        {
+            return isHuman;
+        }
+        set
+        {
+            isHuman = value;
+            if (PV.IsMine)
+            {
+                //휴면 텍스트 그림 등등 설정해주자
+            }
+       
+        }
+    }
     // private CharacterController cc;
     //private Vector3 curPos;
 
@@ -68,6 +87,8 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
+
+
     void Start()
     {
         if(PV.IsMine)
@@ -75,16 +96,19 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             setRigidbodyState(true);
             setColliderState(false);
             //내 캐릭터라면 몸뚱아리가 안보여져도됨
-            healthSlider = GameObject.Find("Canvas").transform.Find("HealthBar").gameObject.GetComponent<Slider>();
+          
         }
         else
         {
-            camara.SetActive(false);
             //내 캐릭터가 아니라면
+            //Canvas꺼줘야함.
+            playerCanvas.SetActive(false);
+            camara.SetActive(false);
             this.GetComponent<ThirdPersonController>().enabled = false;
             hand.layer = 3;
             setRigidbodyState(true);
             setColliderState(false);
+            
         }
                         
         
