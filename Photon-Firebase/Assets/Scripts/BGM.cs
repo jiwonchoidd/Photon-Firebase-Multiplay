@@ -29,6 +29,7 @@ public class BGM : MonoBehaviour
         
         DontDestroyOnLoad(this.gameObject);
         audiosource = GetComponent<AudioSource>();
+        audiosource.volume = PlayerPrefs.GetFloat("bgmvol");
     }
 
     //노래 변경 함수
@@ -45,6 +46,10 @@ public class BGM : MonoBehaviour
             audiosource.clip = bgmArray[i];
             audiosource.Play();
         }
+    }
+    public void VolChange(float i)
+    {
+        audiosource.volume = i;
     }
 
 }
