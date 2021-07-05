@@ -8,6 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviourPunCallbacks
 {
+    //싱글톤 디자인
+    public static GameManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     public GameObject playerPrefab;
     public Text introText;
     public Transform[] spawnPositions;
@@ -15,6 +21,13 @@ public class GameManager : MonoBehaviourPunCallbacks
     private bool isdead=false;
     [SerializeField]
     private GameObject[] players;
+    public GameObject[] PLAYERS
+    {
+        get { return players; }
+        set
+        {
+        }
+    }
     // 내가 죽었는지??
     public bool ISDEAD
     {
@@ -24,11 +37,6 @@ public class GameManager : MonoBehaviourPunCallbacks
             isdead = value;
         }
     }
-    public static GameManager instance;
-    private void Awake()
-    {
-        instance = this;
-    }
 
 
     void Start()
@@ -36,7 +44,13 @@ public class GameManager : MonoBehaviourPunCallbacks
         //인원 수 만큼 시작 시 플레이어 소환
         SpawnPlayer();
     }
-    
+
+    private void Update()
+    {
+        //1. 배열에 플레이어들 다 담아줍니다.
+        //if (players == null)
+        players = GameObject.FindGameObjectsWithTag("Player");
+    }
     //플레이어 소환
     private void SpawnPlayer()
     {
@@ -56,12 +70,13 @@ public class GameManager : MonoBehaviourPunCallbacks
     private void RandomPlayerType(int i)
     {
         //1. 배열에 플레이어들 다 담아줍니다.
-            //if (players == null)
-            players = GameObject.FindGameObjectsWithTag("Player");
+        //if (players == null)
+        players = GameObject.FindGameObjectsWithTag("Player");
         //2. 랜덤 함수로 종족 설정
         var random = UnityEngine.Random.Range(0, i);
         //3. 프로퍼티에 등록한 사람 불값을 펄스로 해놓음.
         players[random].GetComponent<PlayerNetwork>().ISHUMAN = false;
+
     }
 
         #region 방 떠나기

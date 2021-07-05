@@ -62,6 +62,7 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Unity_StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Unity_StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\Scripts\KillLog.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\BGM.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
@@ -105,9 +106,12 @@
     <Compile Include="Assets\Scripts\SaveID.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\KillLog.cs" />
+    <Compile Include="Assets\Scripts\DeathCam.cs" />
+    <Compile Include="Assets\Scripts\Player\FootStep.cs" />
+    <Compile Include="Assets\Scripts\Player\TerrianDetector.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Unity_Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\Parse\Plugins\Unity.Compat.dll" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />

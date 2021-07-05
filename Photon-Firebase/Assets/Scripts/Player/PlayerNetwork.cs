@@ -33,6 +33,9 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             if (PV.IsMine)
             {
                 //휴면 텍스트 그림 등등 설정해주자
+                if (!isHuman)
+                GameManager.instance.introText.text = "You're the Hush";
+
             }
        
         }
@@ -177,6 +180,7 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         //복제 버그 막기위해 올 버퍼드
         PV.RPC("DestroyRPC", RpcTarget.AllBuffered);
         //animator.SetBool("isDead", true);
+        //게임매니져에 죽었다는걸 표시한다.
         GameManager.instance.ISDEAD = true;
         //킬로그!!!
         KillLog.instance.KILLLOG = playerName;
@@ -188,8 +192,10 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     {
        //충돌 방지를 위해 캐릭터 컨트롤러를 꺼주고 애니메이션을 꺼줌 
         gameObject.GetComponent<CharacterController>().enabled = false;
+        gameObject.GetComponent<ThirdPersonController>().enabled = false;
         gameObject.GetComponent<Animator>().enabled = false;
-        Destroy(gameObject, 6f);
+        //파괴하지말자
+        //Destroy(gameObject, 6f);
 
         //래그돌 활성화 근데 밋밋해서 addforce 넣으면 좋을것같음
         setRigidbodyState(false);
