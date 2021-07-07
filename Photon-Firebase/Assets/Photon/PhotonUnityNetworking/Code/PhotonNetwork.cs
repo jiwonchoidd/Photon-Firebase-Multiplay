@@ -1941,6 +1941,7 @@ namespace Photon.Pun
                 if (CurrentRoom == null)
                 {
                     Debug.LogWarning("PhotonNetwork.CurrentRoom is null. You don't have to call LeaveRoom() when you're not in one. State: " + PhotonNetwork.NetworkClientState);
+                    
                 }
                 else
                 {

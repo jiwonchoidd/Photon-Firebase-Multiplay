@@ -7,10 +7,13 @@ using StarterAssets;
 
 public class PlayerNetwork : MonoBehaviourPun, IPunObservable
 {
+    public GameObject light;
+    public GameObject here_obj;
     public GameObject playerCanvas;
+    public GameObject typeImg;
     public Slider healthSlider;
     public GameObject camara;
-    public GameObject hand;
+    public GameObject body_obj;
     private string playerName;
     public PhotonView PV;
     private Vector3 curPos;
@@ -30,12 +33,16 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         set
         {
             isHuman = value;
-            if (PV.IsMine)
+            if(PV.IsMine)
             {
                 //휴면 텍스트 그림 등등 설정해주자
-                if (!isHuman)
-                GameManager.instance.introText.text = "You're the Hush";
-
+                if (ISHUMAN == false)
+                {
+                    GameManager.instance.introText.text = "You're the Hush";
+                    light.SetActive(false);
+                }
+                else
+                    GameManager.instance.introText.text = "You're a Human";
             }
        
         }
@@ -96,6 +103,7 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     {
         if(PV.IsMine)
         {
+            this.GetComponent<PlayerFire>().enabled = false;
             setRigidbodyState(true);
             setColliderState(false);
             //내 캐릭터라면 몸뚱아리가 안보여져도됨
@@ -108,10 +116,11 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
             playerCanvas.SetActive(false);
             camara.SetActive(false);
             this.GetComponent<ThirdPersonController>().enabled = false;
-            hand.layer = 3;
+            this.GetComponent<PlayerFire>().enabled = false;
+            body_obj.layer = 3;
             setRigidbodyState(true);
             setColliderState(false);
-            
+            DetectEnemy();
         }
                         
     }
@@ -120,7 +129,7 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     {
         if (PV.IsMine)
         {
-
+            
         }
         else
         {
@@ -179,12 +188,11 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
     {
         //복제 버그 막기위해 올 버퍼드
         PV.RPC("DestroyRPC", RpcTarget.AllBuffered);
-        //animator.SetBool("isDead", true);
+
         //게임매니져에 죽었다는걸 표시한다.
         GameManager.instance.ISDEAD = true;
         //킬로그!!!
         KillLog.instance.KILLLOG = playerName;
-
     }
 
     [PunRPC]
@@ -194,10 +202,10 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         gameObject.GetComponent<CharacterController>().enabled = false;
         gameObject.GetComponent<ThirdPersonController>().enabled = false;
         gameObject.GetComponent<Animator>().enabled = false;
+        gameObject.GetComponent<PlayerFire>().enabled = false;
+        playerCanvas.SetActive(false);
         //파괴하지말자
         //Destroy(gameObject, 6f);
-
-        //래그돌 활성화 근데 밋밋해서 addforce 넣으면 좋을것같음
         setRigidbodyState(false);
         setColliderState(true);
     }
@@ -231,11 +239,50 @@ public class PlayerNetwork : MonoBehaviourPun, IPunObservable
         {
             stream.SendNext(transform.position);
             stream.SendNext(transform.rotation);
+            stream.SendNext(isHuman);
         }
         else
         {
             curPos = (Vector3)stream.ReceiveNext();
             curRot = (Quaternion)stream.ReceiveNext();
+            this.isHuman = (bool)stream.ReceiveNext();
+        }
+    }
+
+    // 허쉬가 되어라!!!
+    public void BecomeHush(int hushNumber)
+    {
+        if (PhotonNetwork.LocalPlayer == PhotonNetwork.PlayerList[hushNumber])
+        {
+            ISHUMAN = false;
+            typeImg.GetComponent<TypeImg>().ChangeImg();
+            StartCoroutine(FogDelay());
+            StartCoroutine(DetectEnemy());
+            light.SetActive(false);
+
+            //탐지 레이어 핸드 레이어
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            for (int i = 0; i < players.Length; i++)
+            {
+                players[i].transform.FindChild("HERE").gameObject.layer = 6;
+            } 
+        }
+    }
+    IEnumerator FogDelay()
+    {
+        yield return new WaitForSeconds(5f);
+        Fog.instance.LinearStart = -3f;
+        Fog.instance.LinearEnd = 1.3f;
+        this.GetComponent<PlayerFire>().enabled = true;
+    }
+
+    IEnumerator DetectEnemy()
+    {
+        here_obj.SetActive(false);
+        if (gameObject.GetComponent<Animator>().GetFloat("Speed") > 3f)
+        {
+            here_obj.SetActive(true);
+            yield return new WaitForSeconds(1f);
         }
     }
 }

@@ -867,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmArray:
   - {fileID: 8300000, guid: 76237bcf91c711149a51a85d8abd3bc6, type: 3}
-  - {fileID: 8300000, guid: b7abd49643720054a98b5e90ebdfb85b, type: 3}
+  - {fileID: 8300000, guid: 84162c88cfd709148bb35821a2cd81f1, type: 3}
 --- !u!82 &735006154
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2305,8 +2305,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.2
-  far clip plane: 1000
+  near clip plane: 0.1
+  far clip plane: 800
   field of view: 80
   orthographic: 0
   orthographic size: 5
@@ -2332,8 +2332,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900505726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.2, z: 0}
+  m_LocalRotation: {x: 0.0036676223, y: 0.009861359, z: -0.006339496, w: 0.99992454}
+  m_LocalPosition: {x: 0.048610546, y: 1.7669742, z: 0.5732894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

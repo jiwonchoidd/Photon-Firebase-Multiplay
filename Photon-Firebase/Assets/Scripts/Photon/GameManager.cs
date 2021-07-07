@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         instance = this;
     }
+
     public GameObject playerPrefab;
     public Text introText;
     public Transform[] spawnPositions;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     private bool isdead=false;
     [SerializeField]
     private GameObject[] players;
+    private int whichPlayerhush;
     public GameObject[] PLAYERS
     {
         get { return players; }
@@ -38,19 +40,18 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-
     void Start()
     {
         //인원 수 만큼 시작 시 플레이어 소환
+        PV = GetComponent<PhotonView>();
         SpawnPlayer();
+        if(PhotonNetwork.IsMasterClient)
+        {
+            players = GameObject.FindGameObjectsWithTag("Player");
+            PickHush();
+        }
     }
 
-    private void Update()
-    {
-        //1. 배열에 플레이어들 다 담아줍니다.
-        //if (players == null)
-        players = GameObject.FindGameObjectsWithTag("Player");
-    }
     //플레이어 소환
     private void SpawnPlayer()
     {
@@ -63,35 +64,36 @@ public class GameManager : MonoBehaviourPunCallbacks
         var spawnPosition = spawnPositions[localPlayerIndex];
         // 플레이어 생성 
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition.position, spawnPosition.rotation);
-        PV.RPC("RandomPlayerType", RpcTarget.AllBuffered ,localPlayerIndex );
+        
+    }
+
+    void PickHush()
+    {
+        whichPlayerhush = UnityEngine.Random.Range(0, PhotonNetwork.CurrentRoom.PlayerCount);
+        PV.RPC("RPC_SyncImposter", RpcTarget.All, whichPlayerhush);
     }
     //플레이어 랜덤 종족 설정
     [PunRPC]
-    private void RandomPlayerType(int i)
+    private void RPC_SyncImposter(int num)
     {
-        //1. 배열에 플레이어들 다 담아줍니다.
-        //if (players == null)
+        whichPlayerhush = num;
         players = GameObject.FindGameObjectsWithTag("Player");
-        //2. 랜덤 함수로 종족 설정
-        var random = UnityEngine.Random.Range(0, i);
-        //3. 프로퍼티에 등록한 사람 불값을 펄스로 해놓음.
-        players[random].GetComponent<PlayerNetwork>().ISHUMAN = false;
-
+        for (int i=0; i< players.Length; i++ )
+        players[i].GetComponent<PlayerNetwork>().BecomeHush(num);
     }
 
         #region 방 떠나기
-        // 방을 떠나는 버튼에..
-        public void leaveRoom()
-    {
-        PhotonNetwork.LeaveRoom();
-    }
-    public override void OnLeftRoom()
-    {
+        public override void OnLeftRoom()
+        {
         // 내가 방을 떠날때
         SceneManager.LoadScene("Lobby");
-    }
-    #endregion
-
+        }
+        // 방을 떠나는 버튼에..
+        public void leaveRoom()
+        {
+            PhotonNetwork.LeaveRoom();
+        }
+        #endregion
 
 
 }

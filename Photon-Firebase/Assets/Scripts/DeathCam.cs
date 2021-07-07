@@ -29,7 +29,6 @@ public class DeathCam : MonoBehaviour
     private void DeathCamClick()
     {
         currentplayers = GameManager.instance.PLAYERS;
-        targetIndex=ChangeIndex(targetIndex);
         if (currentplayers!=null)
         {
             //print(currentplayers.Length);
@@ -37,12 +36,19 @@ public class DeathCam : MonoBehaviour
             //트라이 캐치문으로 배열 인덱스 예외 처리 해줌
             try
             {
+                targetIndex=ChangeIndex(targetIndex);
                 vcam.Follow = currentplayers[targetIndex].transform;
                 vcam.LookAt = currentplayers[targetIndex].transform;
             }
-            catch (IndexOutOfRangeException e)
+            catch (System.IndexOutOfRangeException e)
             {
                 targetIndex = 0;
+                currentplayers = GameManager.instance.PLAYERS;
+            }
+            catch (NullReferenceException e)
+            {
+                targetIndex = 0;
+                currentplayers = GameManager.instance.PLAYERS;
             }
         }
     }
@@ -52,7 +58,7 @@ public class DeathCam : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             index += 1;
-            if (index>currentplayers.Length)
+            if (index>currentplayers.Length || currentplayers.Length==1)
             {
                 index = 0;
             }
