@@ -1,29 +1,3 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class SceneCheck : MonoBehaviour
-{
-
-    void Start()
-    {
-
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            BGM.Instance.ChangeBGM(0);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            BGM.Instance.ChangeBGM(1);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            BGM.Instance.ChangeBGM(0);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            BGM.Instance.ChangeBGM(1);
-        }
-
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f5d55db3a5f6f366480e1287412df82e860a4c82e2d34547ec68b9d9e838712
+size 648

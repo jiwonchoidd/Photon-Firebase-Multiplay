@@ -1,22 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Cinemachine;
-public class CameraFov : MonoBehaviour
-{
-    private CinemachineVirtualCamera cm;
-    private void Start()
-    {
-        cm = GetComponent<CinemachineVirtualCamera>();
-        if(PlayerPrefs.HasKey("fov"))
-        {
-            AdjustFov();
-           /* print(PlayerPrefs.GetFloat("fov"));*/
-        }
-    }
-
-    void AdjustFov()
-    {
-        cm.m_Lens.FieldOfView=PlayerPrefs.GetFloat("fov");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fecb8c59235626f4b9ce6b58bf0419c79a9528bfd532efb44d335b2353cf2528
+size 524

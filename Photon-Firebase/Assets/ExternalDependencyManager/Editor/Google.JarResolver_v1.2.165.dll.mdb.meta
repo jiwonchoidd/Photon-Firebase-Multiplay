@@ -1,11 +1,3 @@
-fileFormatVersion: 2
-guid: 04608c8b5c2948dbb8bab1df88bfc84d
-labels:
-- gvh
-- gvh_version-1.2.165
-- gvhp_exportpath-ExternalDependencyManager/Editor/Google.JarResolver_v1.2.165.dll.mdb
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:5aac58865f8c9685e64dc17f14ebb276ce2129800646ff8aece2fc41f57cda5d
+size 278

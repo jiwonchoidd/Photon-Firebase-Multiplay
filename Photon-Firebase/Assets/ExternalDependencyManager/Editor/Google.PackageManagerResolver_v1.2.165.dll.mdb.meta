@@ -1,11 +1,3 @@
-fileFormatVersion: 2
-guid: 315970b563fc476981e171374690d1fb
-labels:
-- gvh
-- gvh_version-1.2.165
-- gvhp_exportpath-ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.165.dll.mdb
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:45450c738b23630a9f975cd7869a16827010d24e1e5229ed504007b595b1f875
+size 289

@@ -1,14 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
-public class ParticleExamples {
-
-	public string title;
-	[TextArea]
-	public string description;
-	public bool isWeaponEffect;
-	public GameObject particleSystemGO;
-	public Vector3 particlePosition, particleRotation;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7ecc5fb50d959a97028562afaee846b0706fe5c1abbde7f63730440b838b55f
+size 320

@@ -1,34 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-/// <summary>
-/// This script demonstrate how to use the particle system collision callback.
-/// The sample using it is the "Extinguish" prefab. It use a second, non displayed
-/// particle system to lighten the load of collision detection.
-/// </summary>
-public class ParticleCollision : MonoBehaviour
-{
-    private List<ParticleCollisionEvent> m_CollisionEvents = new List<ParticleCollisionEvent>();
-    private ParticleSystem m_ParticleSystem;
-
-
-    private void Start()
-    {
-        m_ParticleSystem = GetComponent<ParticleSystem>();
-    }
-
-
-    private void OnParticleCollision(GameObject other)
-    {
-        int numCollisionEvents = m_ParticleSystem.GetCollisionEvents(other, m_CollisionEvents);
-        for (int i = 0; i < numCollisionEvents; ++i)
-        {
-            var col = m_CollisionEvents[i].colliderComponent;
-
-            var fire = col.GetComponent<ExtinguishableFire>();
-            if (fire != null)
-                fire.Extinguish();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9ea8bf0fa56be28cca8b76a491720f5f01c0bc1ab6fc5f5822d47e4e496c5ce
+size 1058
