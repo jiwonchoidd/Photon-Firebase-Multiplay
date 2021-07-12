@@ -62,6 +62,7 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Unity_StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Unity_StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\Scripts\Fog.cs" />
     <Compile Include="Assets\Scripts\KillLog.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\BGM.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\Photon\AuthManager.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\Scripts\Player\TypeImg.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Damage.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerFire.cs" />
@@ -111,8 +113,8 @@
     <Compile Include="Assets\Scripts\SaveID.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Player\TypeImg.cs" />
-    <Compile Include="Assets\Scripts\Fog.cs" />
+    <Compile Include="Assets\Scripts\Player\Ragdoll.cs" />
+    <Compile Include="Assets\Scripts\Player\FootStepSolo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
