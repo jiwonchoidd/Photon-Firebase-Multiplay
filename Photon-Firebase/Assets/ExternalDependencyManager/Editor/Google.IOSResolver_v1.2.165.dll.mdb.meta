@@ -1,11 +1,3 @@
-fileFormatVersion: 2
-guid: 2336847545e34850a727a0810ba5c78b
-labels:
-- gvh
-- gvh_version-1.2.165
-- gvhp_exportpath-ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll.mdb
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea76a97a58d4b5c8ce581ac75af03945e970f5ce32877f7f9bb6f3d3f1e24e49
+size 278

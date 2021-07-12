@@ -1,22 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-
-public class ChannelSelector : MonoBehaviour, IPointerClickHandler
-{
-    public string Channel;
-
-    public void SetChannel(string channel)
-    {
-        this.Channel = channel;
-        Text t = GetComponentInChildren<Text>();
-        t.text = this.Channel;        
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        ChatGui handler = FindObjectOfType<ChatGui>();
-        handler.ShowChannel(this.Channel);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b3400d75b63267972822d3928bee250f551544f14ae8b9ea4016fededbab9bb
+size 569
