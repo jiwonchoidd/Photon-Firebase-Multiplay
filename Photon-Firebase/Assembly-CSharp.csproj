@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Player\FootStep.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\Scripts\Photon\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Ragdoll.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\Photon\AuthManager.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ParticleCollision.cs" />
@@ -112,9 +113,9 @@
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\SaveID.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-    <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Player\Ragdoll.cs" />
     <Compile Include="Assets\Scripts\Player\FootStepSolo.cs" />
+    <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Scripts\Player\SearchingItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
