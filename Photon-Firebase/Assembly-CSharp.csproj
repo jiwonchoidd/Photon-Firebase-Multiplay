@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\ButtonSound.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerNetwork.cs" />
     <Compile Include="Assets\Scripts\SceneCheck.cs" />
+    <Compile Include="Assets\Scripts\Player\SearchingItem.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Unity_StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Unity_StarterAssets\TutorialInfo\Scripts\Readme.cs" />
@@ -115,7 +116,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\Player\FootStepSolo.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Player\SearchingItem.cs" />
+    <Compile Include="Assets\Scripts\ItemDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
