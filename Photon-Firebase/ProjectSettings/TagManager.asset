@@ -9,6 +9,7 @@ TagManager:
   - Stone
   - Item
   - Tool
+  - Button
   layers:
   - Default
   - TransparentFX
