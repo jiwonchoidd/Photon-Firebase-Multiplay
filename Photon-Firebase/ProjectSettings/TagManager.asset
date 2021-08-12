@@ -7,6 +7,9 @@ TagManager:
   - Out
   - CinemachineTarget
   - Stone
+  - Item
+  - Tool
+  - Button
   layers:
   - Default
   - TransparentFX

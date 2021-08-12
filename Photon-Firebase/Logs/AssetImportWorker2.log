@@ -1,0 +1,656 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.10f1 (297d780c91bc) revision 2719096'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19043.1110; Version 2009; 64bit' Language: 'ko' Physical Memory: 16322 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+E:\unity\project\2020.3.10f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+E:/github/Photon-Firebase-Multiplay/Photon-Firebase
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+55078
+Successfully changed project path to: E:/github/Photon-Firebase-Multiplay/Photon-Firebase
+E:/github/Photon-Firebase-Multiplay/Photon-Firebase
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 124.54 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.10f1 (297d780c91bc)
+[Subsystems] Discovering subsystems at path E:/unity/project/2020.3.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/github/Photon-Firebase-Multiplay/Photon-Firebase/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1b83)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   30.0.14.7141
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'E:/unity/project/2020.3.10f1/Editor/Data/Managed'
+Mono path[1] = 'E:/unity/project/2020.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/unity/project/2020.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/unity/project/2020.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001730 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 77.90 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.058 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.024651 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 94.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.655 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.20 seconds
+Refreshing native plugins compatible for Editor in 1.27 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4185 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 280.9 MB.
+System memory in use after: 281.1 MB.
+
+Unloading 108 unused Assets to reduce memory usage. Loaded Objects now: 4578.
+Total: 3.456000 ms (FindLiveObjects: 0.395900 ms CreateObjectMapping: 0.171000 ms MarkObjects: 2.735000 ms  DeleteObjects: 0.153100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Materials/Outline.mat
+  artifactKey: Guid(84100a1541278e84f9bd373190724ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Outline.mat using Guid(84100a1541278e84f9bd373190724ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae58e9b352d5e54bbdaba03b4dc149e6') in 0.571273 seconds
+  Import took 0.578837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Materials/Tool/Material/MetalHandle.mat
+  artifactKey: Guid(3a5b5706a321b724fbf0e8c48fd67fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tool/Material/MetalHandle.mat using Guid(3a5b5706a321b724fbf0e8c48fd67fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ef33903a32151018df70d49a17b901d') in 0.119793 seconds
+  Import took 0.125753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Materials/Tool/Material/MetalFront.mat
+  artifactKey: Guid(ffdefc2c145dd1e4da521d300cf6f67f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tool/Material/MetalFront.mat using Guid(ffdefc2c145dd1e4da521d300cf6f67f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f570c63f169986009aee49807994089d') in 0.043586 seconds
+  Import took 0.051770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Materials/Tool/Material/MetalBack.mat
+  artifactKey: Guid(4f873e0411479e045ac4fc76fde8e45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tool/Material/MetalBack.mat using Guid(4f873e0411479e045ac4fc76fde8e45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b760a62f6efbd909025c40de734cacab') in 0.014407 seconds
+  Import took 0.020644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.087280 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-5_comp_dir.png
+  artifactKey: Guid(931c12a6d6592364f8f2d4a175cf4e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-5_comp_dir.png using Guid(931c12a6d6592364f8f2d4a175cf4e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332e22d86adfae2dc76445e071359bed') in 0.169045 seconds
+  Import took 0.176258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-5_comp_light.exr
+  artifactKey: Guid(7c8d2285ff720ea4fbb821803b5e85d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-5_comp_light.exr using Guid(7c8d2285ff720ea4fbb821803b5e85d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f562b7967c2d0c4a5ce607f8537a548') in 0.065414 seconds
+  Import took 0.071356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 100.871887 seconds.
+  path: Assets/Scenes/Play/ReflectionProbe-0.exr
+  artifactKey: Guid(ef021021557d07c42a9ed9ac2072c690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/ReflectionProbe-0.exr using Guid(ef021021557d07c42a9ed9ac2072c690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd221d705fc9a99cdd00ffcd145ae3f63') in 0.133354 seconds
+  Import took 0.139716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Scenes/Play_Solo/ReflectionProbe-0.exr
+  artifactKey: Guid(61a2ccfdd8ce1aa4f810a7080337c149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/ReflectionProbe-0.exr using Guid(61a2ccfdd8ce1aa4f810a7080337c149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbb47506347984728e808ce7f4594f17') in 0.024577 seconds
+  Import took 0.030743 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.059395 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-2_comp_dir.png
+  artifactKey: Guid(4e69ff202e5e4b74398c3203fe11fd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-2_comp_dir.png using Guid(4e69ff202e5e4b74398c3203fe11fd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3546ce59c8a3a44b1109990a936621') in 0.037986 seconds
+  Import took 0.044109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-0_comp_dir.png
+  artifactKey: Guid(fc0e268e72c4d294686586896ba668bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-0_comp_dir.png using Guid(fc0e268e72c4d294686586896ba668bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3e02c0ac79a58b977e0f65fb411348') in 0.035118 seconds
+  Import took 0.042654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-0_comp_light.exr
+  artifactKey: Guid(80d523894cfb27842ba912265df0d91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-0_comp_light.exr using Guid(80d523894cfb27842ba912265df0d91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d6b8c64712cef593030db1e062b334') in 0.037843 seconds
+  Import took 0.044984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Scenes/Play/Lightmap-3_comp_dir.png
+  artifactKey: Guid(713a2b3314519bb4885ba2815916349b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-3_comp_dir.png using Guid(713a2b3314519bb4885ba2815916349b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93888b13a6218248730574f8f229e764') in 0.104421 seconds
+  Import took 0.110417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_SpecSmoothness.png
+  artifactKey: Guid(f22aa85b53690c54087ac985f7f1022d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_SpecSmoothness.png using Guid(f22aa85b53690c54087ac985f7f1022d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad397f928d87a5972a804d8c0cdf4a5') in 0.295101 seconds
+  Import took 0.302571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_rough_4k.png
+  artifactKey: Guid(c1119894525587e46913ad8fce6b4e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_rough_4k.png using Guid(c1119894525587e46913ad8fce6b4e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd17d359dead54b200323b954cc86702') in 0.201959 seconds
+  Import took 0.208690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_disp_4k.png
+  artifactKey: Guid(0e49b1958f08371468b2982d10678a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_disp_4k.png using Guid(0e49b1958f08371468b2982d10678a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '713cc1091e328e5ba32af8e22f0751b6') in 0.245851 seconds
+  Import took 0.253130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Scenes/Play/Lightmap-2_comp_dir.png
+  artifactKey: Guid(cfb9e92c4ef0f074fb529d935f0e070a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-2_comp_dir.png using Guid(cfb9e92c4ef0f074fb529d935f0e070a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd4a6d27c822bcc9e9baabe87a1fa7f') in 0.076283 seconds
+  Import took 0.082438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Scenes/Play/Lightmap-3_comp_light.exr
+  artifactKey: Guid(6b13f3d835ce4204187b418bd4753688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-3_comp_light.exr using Guid(6b13f3d835ce4204187b418bd4753688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff20ed57449ef3913257e8079faaf6d') in 0.193004 seconds
+  Import took 0.198921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_bump_4k.png
+  artifactKey: Guid(8ce5279e04ed4b84dbab2e4bb9b32e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_bump_4k.png using Guid(8ce5279e04ed4b84dbab2e4bb9b32e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c459faf11a3284132da64196e79a8d') in 0.152902 seconds
+  Import took 0.160223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-3_comp_light.exr
+  artifactKey: Guid(85f2dafa82a4b404bbb0b1a97244d068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-3_comp_light.exr using Guid(85f2dafa82a4b404bbb0b1a97244d068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a147022b01a2a810a54e2c3ec51fbbc7') in 0.032882 seconds
+  Import took 0.039302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_rough_ao_4k.png
+  artifactKey: Guid(ef7e74f32acffbf4f86d95c61bb1477e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_rough_ao_4k.png using Guid(ef7e74f32acffbf4f86d95c61bb1477e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e85571096cd7cee21d6da345c5f2f603') in 0.139281 seconds
+  Import took 0.146279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_rough_4k.png
+  artifactKey: Guid(66160944f91a4794b82ba0d451d81988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_rough_4k.png using Guid(66160944f91a4794b82ba0d451d81988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2cdde4b882a572f6451de9c83819f9c') in 0.177246 seconds
+  Import took 0.183777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_ao_4k.png
+  artifactKey: Guid(c35487af0a19c1345948f169c78fa7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_ao_4k.png using Guid(c35487af0a19c1345948f169c78fa7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20e2945b297869a65e3e0d55c93f4ff') in 0.146606 seconds
+  Import took 0.152706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f7e45cf0218f120239a8b8aa5c7d2fd') in 0.073627 seconds
+  Import took 0.078875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_nor_4k.png
+  artifactKey: Guid(4c55301c19813f145a4f5e34c3085173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_nor_4k.png using Guid(4c55301c19813f145a4f5e34c3085173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '407ad3b5191e3d56ce0619bd7d0792b3') in 0.219651 seconds
+  Import took 0.226015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_nor_4k.png
+  artifactKey: Guid(5d6c0bbe44776cd4084336273086dca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_nor_4k.png using Guid(5d6c0bbe44776cd4084336273086dca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbbcac148be9ba3f197173ac2c9db15') in 0.215933 seconds
+  Import took 0.222678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
+  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '470f0d2b96b8c524be0be23782528bf2') in 0.022322 seconds
+  Import took 0.028396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-3_comp_dir.png
+  artifactKey: Guid(697c40a1f663853428841b88292c8f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-3_comp_dir.png using Guid(697c40a1f663853428841b88292c8f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ed0384a729cc7c4f9c1cdc3f3dbbc7') in 0.040895 seconds
+  Import took 0.047304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-1_comp_dir.png
+  artifactKey: Guid(e6770b344da4b874a829e51902446a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-1_comp_dir.png using Guid(e6770b344da4b874a829e51902446a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d4252377fc0c6c3d338e6191965e0eb') in 0.027166 seconds
+  Import took 0.033189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-4_comp_dir.png
+  artifactKey: Guid(041c54688882681408a7c72c888008ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-4_comp_dir.png using Guid(041c54688882681408a7c72c888008ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '674e8b9c1185f559c840829640aae64a') in 0.034905 seconds
+  Import took 0.041054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_diff_4k.png
+  artifactKey: Guid(1d867bec896c2a341b3a3fbc171e5ebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/concrete_floor_painted/concrete_floor_painted_diff_4k.png using Guid(1d867bec896c2a341b3a3fbc171e5ebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47225baa0f7c1443edf44c6e912c53f9') in 0.153021 seconds
+  Import took 0.159050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Scenes/Play/Lightmap-1_comp_light.exr
+  artifactKey: Guid(956909a74321c434295941692ee4b99d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-1_comp_light.exr using Guid(956909a74321c434295941692ee4b99d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b728e36527afde3caf3c50cb54215f2b') in 0.036209 seconds
+  Import took 0.042002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9373b8ddda1afc23e71596aad2e10d3') in 0.051913 seconds
+  Import took 0.057612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_spec_4k.png
+  artifactKey: Guid(60171df2fc3dd474796dd172fb0cdbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_spec_4k.png using Guid(60171df2fc3dd474796dd172fb0cdbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9cb03260dc1e345306877d97c547fed') in 0.179581 seconds
+  Import took 0.186319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Scenes/Play/Lightmap-1_comp_dir.png
+  artifactKey: Guid(792715e4a80dfac4bbb2fc3d5c0e142d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-1_comp_dir.png using Guid(792715e4a80dfac4bbb2fc3d5c0e142d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a8ed6b786b166d72e2f54d457384e58') in 0.037260 seconds
+  Import took 0.044137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-4_comp_light.exr
+  artifactKey: Guid(381bd382d0fd2ce45a2588abd60a5e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-4_comp_light.exr using Guid(381bd382d0fd2ce45a2588abd60a5e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7cb8405e46bf7948b2e1bfd0606365a') in 0.040750 seconds
+  Import took 0.047282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-1_comp_light.exr
+  artifactKey: Guid(e432a36959299c3428a8b75a6fd94fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-1_comp_light.exr using Guid(e432a36959299c3428a8b75a6fd94fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b598e8d79fc50833c9ce5d08d72c9c77') in 0.034021 seconds
+  Import took 0.040880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_diff_4k.png
+  artifactKey: Guid(ed79f1505d9f3e44e940414bc05a676f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_diff_4k.png using Guid(ed79f1505d9f3e44e940414bc05a676f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '027fdd9bd90f829f48940c75fa577eb6') in 0.144658 seconds
+  Import took 0.151880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_disp_4k.png
+  artifactKey: Guid(30ea559bced7b3044bbd2c59fb9d897c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_disp_4k.png using Guid(30ea559bced7b3044bbd2c59fb9d897c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b09ff5c8e3b6dd3d3a65f164d6a18b') in 0.139765 seconds
+  Import took 0.145997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Scenes/Play/Lightmap-0_comp_dir.png
+  artifactKey: Guid(570daef99f7b32f47a03ffa0c4d51fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-0_comp_dir.png using Guid(570daef99f7b32f47a03ffa0c4d51fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fef360debe3407be50721ae8bdf43da5') in 0.035204 seconds
+  Import took 0.040664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Scenes/Play/Lightmap-2_comp_light.exr
+  artifactKey: Guid(5d1e17d57736d464492135e245c3ac65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-2_comp_light.exr using Guid(5d1e17d57736d464492135e245c3ac65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8462ba49e795a54baef6db8b0aa76d') in 0.029675 seconds
+  Import took 0.036014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Scenes/Play_Solo/Lightmap-2_comp_light.exr
+  artifactKey: Guid(45477b69427aa924ab3ae6869ee12989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play_Solo/Lightmap-2_comp_light.exr using Guid(45477b69427aa924ab3ae6869ee12989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc3121c3c6da594d086102a93748a64') in 0.036957 seconds
+  Import took 0.042413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_AO_4k.png
+  artifactKey: Guid(8648e025ce1341c478148d31cb330a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_textures/floor_pebbles/floor_pebbles_01_AO_4k.png using Guid(8648e025ce1341c478148d31cb330a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e28b813e8ea3e75bc1a741b82b453e0f') in 0.127736 seconds
+  Import took 0.133683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Scenes/Play/Lightmap-0_comp_light.exr
+  artifactKey: Guid(8f38c6de33226864d8265e204adffe3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Play/Lightmap-0_comp_light.exr using Guid(8f38c6de33226864d8265e204adffe3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbcf6dc86dcc5e071ab2ed35cb9a2913') in 0.031619 seconds
+  Import took 0.037406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Unity_Barking_Dog/3D Free Modular Kit/_Textures/Diffuse_01.png
+  artifactKey: Guid(b2c54144d5fbb4a14b95d5e2ec07dbf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_Barking_Dog/3D Free Modular Kit/_Textures/Diffuse_01.png using Guid(b2c54144d5fbb4a14b95d5e2ec07dbf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '234f500cdaeca88f007e525b667616f5') in 0.058330 seconds
+  Import took 0.064146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 128.799992 seconds.
+  path: Assets/Unity_PBRMaterials/PBRWoodMaterials/Materials/WoodReinforced1.mat
+  artifactKey: Guid(0c78d08393d68fe4584a24393e825e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_PBRMaterials/PBRWoodMaterials/Materials/WoodReinforced1.mat using Guid(0c78d08393d68fe4584a24393e825e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c613998764573a853ee0b6b7bb69bc9d') in 0.032365 seconds
+  Import took 0.038650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Unity_PBRMaterials/PBRWoodMaterials/Materials/WoodRough1.mat
+  artifactKey: Guid(0ad2e8d2c7f13e249b9738772eb1151d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_PBRMaterials/PBRWoodMaterials/Materials/WoodRough1.mat using Guid(0ad2e8d2c7f13e249b9738772eb1151d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a4ac9649cefa93510c5e158ee0aecb') in 0.016233 seconds
+  Import took 0.022485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.645495 seconds.
+  path: Assets/Unity_EffectExamples/WeaponEffects/Textures/WaterSplashParticle.mat
+  artifactKey: Guid(b96fa6813686d9d4f844ead1ff3f9f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_EffectExamples/WeaponEffects/Textures/WaterSplashParticle.mat using Guid(b96fa6813686d9d4f844ead1ff3f9f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d7284ab2457815eac494b9941258a0') in 0.040822 seconds
+  Import took 0.047597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.392765 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_materials/concrete_floor_painted.mat
+  artifactKey: Guid(4cb799ad38b5ea649a6046ddf27870f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_materials/concrete_floor_painted.mat using Guid(4cb799ad38b5ea649a6046ddf27870f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85d78c50fdc5356578d2128ea351bac') in 0.072069 seconds
+  Import took 0.083044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Materials/Tool/Dial_Out.mat
+  artifactKey: Guid(b8cc9ac1113bc224cbe60698e1d306ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tool/Dial_Out.mat using Guid(b8cc9ac1113bc224cbe60698e1d306ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2e24560e3bd0da771f4a079042ff1b') in 0.072429 seconds
+  Import took 0.079289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd672c24d05503c0577d7c5fbd2d45094') in 0.026595 seconds
+  Import took 0.032423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Unity_TextureHaven/floor_4k/floor_4k_materials/floor_pebbles.mat
+  artifactKey: Guid(44c9dbac4e39fcb44a7a99fff9ea449d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_TextureHaven/floor_4k/floor_4k_materials/floor_pebbles.mat using Guid(44c9dbac4e39fcb44a7a99fff9ea449d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f6c0c382d941acbe4259be1fa62d294') in 0.097175 seconds
+  Import took 0.109097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Unity_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Diffuse_01.mat
+  artifactKey: Guid(34e48a3ce50b34c339d8fc61e309e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Diffuse_01.mat using Guid(34e48a3ce50b34c339d8fc61e309e31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa7ad7b90ba443431472abdbce7a8371') in 0.336551 seconds
+  Import took 0.345386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Materials/Tool_Metal.mat
+  artifactKey: Guid(60177390e9a025f408c2af0aa9e833d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tool_Metal.mat using Guid(60177390e9a025f408c2af0aa9e833d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed8ff89307a8c3dceb3c9ce411480f16') in 0.022551 seconds
+  Import took 0.028554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Unity_EffectExamples/FireExplosionEffects/Materials/SmokeLightParticle.mat
+  artifactKey: Guid(f06455b167e1b0b428c9af62d7aa6832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity_EffectExamples/FireExplosionEffects/Materials/SmokeLightParticle.mat using Guid(f06455b167e1b0b428c9af62d7aa6832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e5cd411579a8de8857c10b6cf7372f') in 0.133907 seconds
+  Import took 0.142059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad632d3c313189fa1aeccf75d0bcd65a') in 0.022967 seconds
+  Import took 0.028923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7a18a58d197ea4af00ee0fa3487a4d') in 0.051298 seconds
+  Import took 0.057005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Materials/Tool/Dial_In.mat
+  artifactKey: Guid(870b0d3eff1d4c247ba49c6901781803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Tool/Dial_In.mat using Guid(870b0d3eff1d4c247ba49c6901781803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2163da398c03d3650b87904661bfcb3') in 0.036877 seconds
+  Import took 0.045221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Materials/Here.mat
+  artifactKey: Guid(d0001d204cb7b1844867622180b1cb96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Here.mat using Guid(d0001d204cb7b1844867622180b1cb96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1404927331044e0aac1b07a7674967ec') in 0.049242 seconds
+  Import took 0.055418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.668608 seconds.
+  path: Assets/Materials/Score/Score_Ball.mat
+  artifactKey: Guid(3bd48b8547865d24595951cd4b113b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Score/Score_Ball.mat using Guid(3bd48b8547865d24595951cd4b113b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9966081621a4481bbda3b0ac25e11d6d') in 0.039519 seconds
+  Import took 0.045393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Materials/Score/Score_Disable.mat
+  artifactKey: Guid(50031e39f3dd7ae4b813d5cc57ee386c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Score/Score_Disable.mat using Guid(50031e39f3dd7ae4b813d5cc57ee386c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14f6ea3efba2a44d33ffe953e3f08377') in 0.030542 seconds
+  Import took 0.036205 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.031890 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.04 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.528 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 274.5 MB.
+System memory in use after: 274.7 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 4671.
+Total: 75.262400 ms (FindLiveObjects: 0.850800 ms CreateObjectMapping: 0.769800 ms MarkObjects: 73.231200 ms  DeleteObjects: 0.407600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.029655 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.254 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 274.6 MB.
+System memory in use after: 274.8 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 4675.
+Total: 3.128100 ms (FindLiveObjects: 0.386400 ms CreateObjectMapping: 0.180900 ms MarkObjects: 2.457800 ms  DeleteObjects: 0.102200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.604015 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  9.070 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 274.7 MB.
+System memory in use after: 274.9 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 4679.
+Total: 3.303300 ms (FindLiveObjects: 0.346400 ms CreateObjectMapping: 0.174500 ms MarkObjects: 2.645000 ms  DeleteObjects: 0.136300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.027447 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.467 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 274.7 MB.
+System memory in use after: 274.9 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 4683.
+Total: 3.579200 ms (FindLiveObjects: 0.389400 ms CreateObjectMapping: 0.242900 ms MarkObjects: 2.840300 ms  DeleteObjects: 0.106000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024414 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.446 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 274.7 MB.
+System memory in use after: 274.9 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 4687.
+Total: 3.436600 ms (FindLiveObjects: 0.403100 ms CreateObjectMapping: 0.197100 ms MarkObjects: 2.721700 ms  DeleteObjects: 0.113800 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
