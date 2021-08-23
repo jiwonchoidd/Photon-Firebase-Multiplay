@@ -6,19 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Signin.unity
+    path: Assets/Scenes/GameScene/Signin.unity
     guid: 3c94348d5cdaceb4e8378684553f9cfa
   - enabled: 1
-    path: Assets/Scenes/CreateAccount.unity
-    guid: ccee7fa671622d342b55f926d2a7113b
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Scenes/GameScene/Lobby.unity
     guid: ed3b4d1cba5959a4885237391993249e
-  - enabled: 1
-    path: Assets/Scenes/Play.unity
-    guid: fd662936c9874104a90fcc82643f6113
-  - enabled: 1
-    path: Assets/Scenes/Play_Solo.unity
-    guid: a51a1f7cb35613d448e504e58f50ef9c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
