@@ -10,6 +10,8 @@ TagManager:
   - Item
   - Tool
   - Button
+  - NetworkManager
+  - AuthManager
   layers:
   - Default
   - TransparentFX

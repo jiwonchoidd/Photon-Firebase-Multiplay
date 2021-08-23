@@ -13400,25 +13400,6 @@ IL_000e:
 		return (bool)0;
 	}
 }
-// System.Boolean System.Double::IsNegativeInfinity(System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_IsNegativeInfinity_mC1D75A4899CED3409270190F7DC1042001C668D7 (double ___d0, const RuntimeMethod* method)
-{
-	{
-		double L_0 = ___d0;
-		if ((!(((double)L_0) == ((double)(-std::numeric_limits<double>::infinity())))))
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		return (bool)1;
-	}
-
-IL_000e:
-	{
-		return (bool)0;
-	}
-}
 // System.Boolean System.Double::IsNaN(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_IsNaN_m94415C98C2D7DCAA32A82E1911AC13958AAD4347 (double ___d0, const RuntimeMethod* method)
 {

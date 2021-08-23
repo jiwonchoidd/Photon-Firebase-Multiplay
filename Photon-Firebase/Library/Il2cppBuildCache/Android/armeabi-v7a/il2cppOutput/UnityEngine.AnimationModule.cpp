@@ -109,8 +109,6 @@ struct Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71;
 struct Avatar_t1A1B32874530475986346E2EED62F9DDEE8C45C6;
 // UnityEngine.AvatarMask
 struct AvatarMask_t121FF9294A9B0C496C909313D9B146177BD6C8BE;
-// UnityEngine.Behaviour
-struct Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9;
 // System.Reflection.Binder
 struct Binder_t2BEE27FD84737D1E79BC47FD67F6D3DD2F2DDA30;
 // System.Delegate
@@ -3631,10 +3629,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableOutput__ctor_m69B5F29DF2D785051B714CFEAAAF09A237978297 (PlayableOutput_tE735DC774F014DB1711310988F2F914C66520F82 * __this, PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1  ___handle0, const RuntimeMethod* method);
 // UnityEngine.Playables.PlayableOutputHandle UnityEngine.Playables.PlayableOutput::GetHandle()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1  PlayableOutput_GetHandle_mC56A4F912A7AC8640DE78F95DD6C4F346E36820E (PlayableOutput_tE735DC774F014DB1711310988F2F914C66520F82 * __this, const RuntimeMethod* method);
-// UnityEngine.Animator UnityEngine.Animations.AnimationPlayableOutput::InternalGetTarget(UnityEngine.Playables.PlayableOutputHandle&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * AnimationPlayableOutput_InternalGetTarget_mE55053F0AC8095A661E539541A49885296EA66F2 (PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 * ___handle0, const RuntimeMethod* method);
-// UnityEngine.Animator UnityEngine.Animations.AnimationPlayableOutput::GetTarget()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * AnimationPlayableOutput_GetTarget_m3883A7D6DFC7849DC3FBFDF5B5B93CC0C10E2F85 (AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Animations.AnimationPlayableOutput::InternalSetTarget(UnityEngine.Playables.PlayableOutputHandle&,UnityEngine.Animator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPlayableOutput_InternalSetTarget_mE310C5DBD3F0F5EDD7DAA8D9F6E329B06C0F307F (PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 * ___handle0, Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * ___target1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Playables.PlayableHandle::IsPlayableOfType<UnityEngine.Animations.AnimationPosePlayable>()
@@ -3702,8 +3696,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_get_deltaPosition_Injected_m1E4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_GetAnimatorStateInfo_m623172399D38470B4C5EB7DE06A3106AB6958657 (Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * __this, int32_t ___layerIndex0, int32_t ___stateInfoIndex1, AnimatorStateInfo_t052E146D2DB1EC155950ECA45734BF57134258AA * ___info2, const RuntimeMethod* method);
 // System.Void UnityEngine.Animator::GetAnimatorClipInfoInternal(System.Int32,System.Boolean,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_GetAnimatorClipInfoInternal_m7369503B85FAE6630B97209D4F3A7492BD31EA39 (Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * __this, int32_t ___layerIndex0, bool ___isCurrent1, RuntimeObject * ___clips2, const RuntimeMethod* method);
-// System.Void UnityEngine.Behaviour::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour__ctor_mCACD3614226521EA607B0F3640C0FAC7EACCBCE0 (Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9 * __this, const RuntimeMethod* method);
 // UnityEngine.AnimationClip UnityEngine.AnimatorClipInfo::InstanceIDToAnimationClipPPtr(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnimationClip_tD9BFD73D43793BA608D5C0B46BE29EB59E40D178 * AnimatorClipInfo_InstanceIDToAnimationClipPPtr_mDA532C9ADE4056E3577FD254944CAF65767DC58B (int32_t ___instanceID0, const RuntimeMethod* method);
 // UnityEngine.AnimationClip UnityEngine.AnimatorClipInfo::get_clip()
@@ -5955,32 +5947,6 @@ IL_0010:
 		return L_2;
 	}
 }
-// UnityEngine.Animator UnityEngine.Animations.AnimationPlayableOutput::GetTarget()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * AnimationPlayableOutput_GetTarget_m3883A7D6DFC7849DC3FBFDF5B5B93CC0C10E2F85 (AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 * __this, const RuntimeMethod* method)
-{
-	Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * V_0 = NULL;
-	{
-		PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 * L_0 = __this->get_address_of_m_Handle_0();
-		Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * L_1;
-		L_1 = AnimationPlayableOutput_InternalGetTarget_mE55053F0AC8095A661E539541A49885296EA66F2((PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 *)L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000f;
-	}
-
-IL_000f:
-	{
-		Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * L_2 = V_0;
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C  Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * AnimationPlayableOutput_GetTarget_m3883A7D6DFC7849DC3FBFDF5B5B93CC0C10E2F85_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	int32_t _offset = 1;
-	AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 * _thisAdjusted = reinterpret_cast<AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 *>(__this + _offset);
-	Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * _returnValue;
-	_returnValue = AnimationPlayableOutput_GetTarget_m3883A7D6DFC7849DC3FBFDF5B5B93CC0C10E2F85(_thisAdjusted, method);
-	return _returnValue;
-}
 // System.Void UnityEngine.Animations.AnimationPlayableOutput::SetTarget(UnityEngine.Animator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPlayableOutput_SetTarget_m7641CA468712BC658E3493162F10FC145F021118 (AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 * __this, Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * ___value0, const RuntimeMethod* method)
 {
@@ -5996,16 +5962,6 @@ IL2CPP_EXTERN_C  void AnimationPlayableOutput_SetTarget_m7641CA468712BC658E34931
 	int32_t _offset = 1;
 	AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 * _thisAdjusted = reinterpret_cast<AnimationPlayableOutput_t14570F3E63619E52ABB0B0306D4F4AAA6225DE17 *>(__this + _offset);
 	AnimationPlayableOutput_SetTarget_m7641CA468712BC658E3493162F10FC145F021118(_thisAdjusted, ___value0, method);
-}
-// UnityEngine.Animator UnityEngine.Animations.AnimationPlayableOutput::InternalGetTarget(UnityEngine.Playables.PlayableOutputHandle&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * AnimationPlayableOutput_InternalGetTarget_mE55053F0AC8095A661E539541A49885296EA66F2 (PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 * ___handle0, const RuntimeMethod* method)
-{
-	typedef Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * (*AnimationPlayableOutput_InternalGetTarget_mE55053F0AC8095A661E539541A49885296EA66F2_ftn) (PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 *);
-	static AnimationPlayableOutput_InternalGetTarget_mE55053F0AC8095A661E539541A49885296EA66F2_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AnimationPlayableOutput_InternalGetTarget_mE55053F0AC8095A661E539541A49885296EA66F2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animations.AnimationPlayableOutput::InternalGetTarget(UnityEngine.Playables.PlayableOutputHandle&)");
-	Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * icallRetVal = _il2cpp_icall_func(___handle0);
-	return icallRetVal;
 }
 // System.Void UnityEngine.Animations.AnimationPlayableOutput::InternalSetTarget(UnityEngine.Playables.PlayableOutputHandle&,UnityEngine.Animator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPlayableOutput_InternalSetTarget_mE310C5DBD3F0F5EDD7DAA8D9F6E329B06C0F307F (PlayableOutputHandle_t8C84BCDB2AECFEDBCF0E7CC7CDBADD517D148CD1 * ___handle0, Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * ___target1, const RuntimeMethod* method)
@@ -7071,14 +7027,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetFloatStringDamp_mE5687E1F614
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Animator_SetFloatStringDamp_mE5687E1F614DEDDE45110DA6A55F1B5499667B0C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::SetFloatStringDamp(System.String,System.Single,System.Single,System.Single)");
 	_il2cpp_icall_func(__this, ___name0, ___value1, ___dampTime2, ___deltaTime3);
-}
-// System.Void UnityEngine.Animator::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator__ctor_m018E7D6694796B1D8E098AB8142B5E4406BA24F2 (Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * __this, const RuntimeMethod* method)
-{
-	{
-		Behaviour__ctor_mCACD3614226521EA607B0F3640C0FAC7EACCBCE0(__this, /*hidden argument*/NULL);
-		return;
-	}
 }
 // System.Void UnityEngine.Animator::get_deltaPosition_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_get_deltaPosition_Injected_m1E4EE8E8FF829CD0CA02B5B2993B8F52F51FAE7E (Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * ___ret0, const RuntimeMethod* method)

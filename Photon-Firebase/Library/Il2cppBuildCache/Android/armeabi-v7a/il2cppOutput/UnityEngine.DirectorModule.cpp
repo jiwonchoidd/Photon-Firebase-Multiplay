@@ -485,34 +485,6 @@ struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_marshaled_com
 	intptr_t ___m_CachedPtr_0;
 };
 
-// UnityEngine.Playables.PlayableGraph
-struct PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A 
-{
-public:
-	// System.IntPtr UnityEngine.Playables.PlayableGraph::m_Handle
-	intptr_t ___m_Handle_0;
-	// System.UInt32 UnityEngine.Playables.PlayableGraph::m_Version
-	uint32_t ___m_Version_1;
-
-public:
-	inline static int32_t get_offset_of_m_Handle_0() { return static_cast<int32_t>(offsetof(PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A, ___m_Handle_0)); }
-	inline intptr_t get_m_Handle_0() const { return ___m_Handle_0; }
-	inline intptr_t* get_address_of_m_Handle_0() { return &___m_Handle_0; }
-	inline void set_m_Handle_0(intptr_t value)
-	{
-		___m_Handle_0 = value;
-	}
-
-	inline static int32_t get_offset_of_m_Version_1() { return static_cast<int32_t>(offsetof(PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A, ___m_Version_1)); }
-	inline uint32_t get_m_Version_1() const { return ___m_Version_1; }
-	inline uint32_t* get_address_of_m_Version_1() { return &___m_Version_1; }
-	inline void set_m_Version_1(uint32_t value)
-	{
-		___m_Version_1 = value;
-	}
-};
-
-
 // UnityEngine.Component
 struct Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
@@ -647,12 +619,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m587509C88BB83721D7918D8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayableDirector_GetWrapMode_mFCC5A829BF7AF2AB38AE1C9B34E1B153201D075B (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method);
 // UnityEngine.ScriptableObject UnityEngine.Playables.PlayableDirector::Internal_GetPlayableAsset()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A * PlayableDirector_Internal_GetPlayableAsset_m92B5F23CCF576F9501B886D31080C8BBC3AD9BFF (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method);
-// UnityEngine.Playables.PlayableGraph UnityEngine.Playables.PlayableDirector::GetGraphHandle()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  PlayableDirector_GetGraphHandle_mE517AFA258534E1EA23BADAC8FF8A6A8A0140E82 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method);
 // UnityEngine.Object UnityEngine.Playables.PlayableDirector::GetReferenceValue_Injected(UnityEngine.PropertyName&,System.Boolean&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * PlayableDirector_GetReferenceValue_Injected_m087EBFEF853EAD0636C75B3CC81A89540CC50B12 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, PropertyName_t1B3B39F9873F8967D3557FE2CCF4E415F909FEC1 * ___id0, bool* ___idValid1, const RuntimeMethod* method);
-// System.Void UnityEngine.Playables.PlayableDirector::GetGraphHandle_Injected(UnityEngine.Playables.PlayableGraph&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_GetGraphHandle_Injected_mC8D5229430DB83FA659E7780D26DC991CAF41EF7 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A * ___ret0, const RuntimeMethod* method);
 // System.Void System.Action`1<UnityEngine.Playables.PlayableDirector>::Invoke(!0)
 inline void Action_1_Invoke_mDC4EA7BB7E1D881A06381E333FC42B50ECE17F2A (Action_1_tEFFD33105460921F68C4261E79791D397C76CB1B * __this, PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * ___obj0, const RuntimeMethod* method)
 {
@@ -711,24 +679,6 @@ IL_000f:
 		return L_1;
 	}
 }
-// UnityEngine.Playables.PlayableGraph UnityEngine.Playables.PlayableDirector::get_playableGraph()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  PlayableDirector_get_playableGraph_m03CBFE5B8BD1BE1171169850B7E4DD4C5436E651 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method)
-{
-	PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  L_0;
-		L_0 = PlayableDirector_GetGraphHandle_mE517AFA258534E1EA23BADAC8FF8A6A8A0140E82(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  L_1 = V_0;
-		return L_1;
-	}
-}
 // System.Void UnityEngine.Playables.PlayableDirector::set_time(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_set_time_m1F9C316C3EDC9EB58D381C1F2520499125C1365A (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, double ___value0, const RuntimeMethod* method)
 {
@@ -758,15 +708,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double PlayableDirector_get_duration_m82E33D8
 	double icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
 }
-// System.Void UnityEngine.Playables.PlayableDirector::Evaluate()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_Evaluate_m8F2ABDAB081549041C006C2BA9E574BC99E5D40E (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method)
-{
-	typedef void (*PlayableDirector_Evaluate_m8F2ABDAB081549041C006C2BA9E574BC99E5D40E_ftn) (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 *);
-	static PlayableDirector_Evaluate_m8F2ABDAB081549041C006C2BA9E574BC99E5D40E_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableDirector_Evaluate_m8F2ABDAB081549041C006C2BA9E574BC99E5D40E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableDirector::Evaluate()");
-	_il2cpp_icall_func(__this);
-}
 // System.Void UnityEngine.Playables.PlayableDirector::Play()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_Play_m13D31AD720EEE25E93A21394B225EA10300C47C4 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method)
 {
@@ -783,15 +724,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_Stop_m4C9FCBB20CDD4BF75
 	static PlayableDirector_Stop_m4C9FCBB20CDD4BF75DF910F3BE713251D9548C96_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (PlayableDirector_Stop_m4C9FCBB20CDD4BF75DF910F3BE713251D9548C96_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableDirector::Stop()");
-	_il2cpp_icall_func(__this);
-}
-// System.Void UnityEngine.Playables.PlayableDirector::Pause()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_Pause_m5BA5158743B8DC38E2D681894F09E82F94FBCA47 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method)
-{
-	typedef void (*PlayableDirector_Pause_m5BA5158743B8DC38E2D681894F09E82F94FBCA47_ftn) (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 *);
-	static PlayableDirector_Pause_m5BA5158743B8DC38E2D681894F09E82F94FBCA47_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableDirector_Pause_m5BA5158743B8DC38E2D681894F09E82F94FBCA47_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableDirector::Pause()");
 	_il2cpp_icall_func(__this);
 }
 // UnityEngine.Object UnityEngine.Playables.PlayableDirector::GetReferenceValue(UnityEngine.PropertyName,System.Boolean&)
@@ -823,17 +755,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayableDirector_GetWrapMode_mFCC5A82
 	_il2cpp_icall_func = (PlayableDirector_GetWrapMode_mFCC5A829BF7AF2AB38AE1C9B34E1B153201D075B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableDirector::GetWrapMode()");
 	int32_t icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
-}
-// UnityEngine.Playables.PlayableGraph UnityEngine.Playables.PlayableDirector::GetGraphHandle()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  PlayableDirector_GetGraphHandle_mE517AFA258534E1EA23BADAC8FF8A6A8A0140E82 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method)
-{
-	PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		PlayableDirector_GetGraphHandle_Injected_mC8D5229430DB83FA659E7780D26DC991CAF41EF7(__this, (PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A *)(&V_0), /*hidden argument*/NULL);
-		PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A  L_0 = V_0;
-		return L_0;
-	}
 }
 // UnityEngine.ScriptableObject UnityEngine.Playables.PlayableDirector::Internal_GetPlayableAsset()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A * PlayableDirector_Internal_GetPlayableAsset_m92B5F23CCF576F9501B886D31080C8BBC3AD9BFF (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, const RuntimeMethod* method)
@@ -944,15 +865,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Object_tF2F3778131EFF286AF62B7B013A170F95A915
 	_il2cpp_icall_func = (PlayableDirector_GetReferenceValue_Injected_m087EBFEF853EAD0636C75B3CC81A89540CC50B12_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableDirector::GetReferenceValue_Injected(UnityEngine.PropertyName&,System.Boolean&)");
 	Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * icallRetVal = _il2cpp_icall_func(__this, ___id0, ___idValid1);
 	return icallRetVal;
-}
-// System.Void UnityEngine.Playables.PlayableDirector::GetGraphHandle_Injected(UnityEngine.Playables.PlayableGraph&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_GetGraphHandle_Injected_mC8D5229430DB83FA659E7780D26DC991CAF41EF7 (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 * __this, PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A * ___ret0, const RuntimeMethod* method)
-{
-	typedef void (*PlayableDirector_GetGraphHandle_Injected_mC8D5229430DB83FA659E7780D26DC991CAF41EF7_ftn) (PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38 *, PlayableGraph_t2D5083CFACB413FA1BB13FF054BE09A5A55A205A *);
-	static PlayableDirector_GetGraphHandle_Injected_mC8D5229430DB83FA659E7780D26DC991CAF41EF7_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableDirector_GetGraphHandle_Injected_mC8D5229430DB83FA659E7780D26DC991CAF41EF7_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableDirector::GetGraphHandle_Injected(UnityEngine.Playables.PlayableGraph&)");
-	_il2cpp_icall_func(__this, ___ret0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

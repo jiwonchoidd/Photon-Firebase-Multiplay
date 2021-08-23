@@ -369,6 +369,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_mEA25DFFCAB673BD76ADA4
 IL2CPP_EXTERN_C const RuntimeMethod* _AndroidJNIHelper_ConvertFromJNIArray_TisBoolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_m20E7EDFF477647AD2AAEA5C01F2F96F086673299_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* _AndroidJNIHelper_ConvertFromJNIArray_TisChar_tFF60D8E7E89A20BE2294A003734341BD1DF43E14_mF3A18A8F874B12CB2B14263BF4574ABB14FBCF1E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* _AndroidJNIHelper_ConvertFromJNIArray_TisDouble_t42821932CB52DE2057E685D0E1AF3DE5033D2181_m5DFA0BED6B580096B2E3ADB1394F918653E21D07_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* _AndroidJNIHelper_ConvertFromJNIArray_TisInt16_tD0F031114106263BB459DA1F099FF9F42691295A_m8139D52A1384EE34677345013798688D522DFF37_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* Byte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_0_0_0_var;
@@ -13540,756 +13541,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__ctor_m880F6533139DF0B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44 (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method);
 // System.Void System.Exception::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m8ECDE8ACA7F2E0EF1144BD1200FB5DB2870B5F11 (Exception_t * __this, String_t* ___message0, const RuntimeMethod* method);
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<DG.Tweening.Color2,DG.Tweening.Color2,DG.Tweening.Plugins.Options.ColorOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisColor2_t4086E9F7E3F1C7E8C255F4F17E3BF4228D79EBE9_TisColor2_t4086E9F7E3F1C7E8C255F4F17E3BF4228D79EBE9_TisColorOptions_t25AF005F398643658A000DBAD00EFF82C944355A_mFD9B1E0AD89C4B1A946FF654C7ED931EA0A2C477_gshared (TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * G_B4_0 = NULL;
-	TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * G_B5_1 = NULL;
-	{
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_2 = ___t0;
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_tB718D1780EF12763326977CF503265AC53091649 * L_4 = (ABSTweenPlugin_3_tB718D1780EF12763326977CF503265AC53091649 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_5 = ___t0;
-		NullCheck(L_5);
-		ColorOptions_t25AF005F398643658A000DBAD00EFF82C944355A  L_6 = (ColorOptions_t25AF005F398643658A000DBAD00EFF82C944355A )L_5->get_plugOptions_60();
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_9 = ___t0;
-		NullCheck(L_9);
-		Color2_t4086E9F7E3F1C7E8C255F4F17E3BF4228D79EBE9  L_10 = (Color2_t4086E9F7E3F1C7E8C255F4F17E3BF4228D79EBE9 )L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_tB718D1780EF12763326977CF503265AC53091649 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, ColorOptions_t25AF005F398643658A000DBAD00EFF82C944355A , float, Color2_t4086E9F7E3F1C7E8C255F4F17E3BF4228D79EBE9  >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<DG.Tweening.Color2,DG.Tweening.Color2,DG.Tweening.Plugins.Options.ColorOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_tB718D1780EF12763326977CF503265AC53091649 *)L_4, (ColorOptions_t25AF005F398643658A000DBAD00EFF82C944355A )L_6, (float)L_8, (Color2_t4086E9F7E3F1C7E8C255F4F17E3BF4228D79EBE9 )L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_12 = ___t0;
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_tFE23006F67E2324961973085651033841616F5BF * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.Double,System.Double,DG.Tweening.Plugins.Options.NoOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisDouble_t42821932CB52DE2057E685D0E1AF3DE5033D2181_TisDouble_t42821932CB52DE2057E685D0E1AF3DE5033D2181_TisNoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903_m3BD21B09532C8B5F0BCD9C44D825B2E6E59B933D_gshared (TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * G_B4_0 = NULL;
-	TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * G_B5_1 = NULL;
-	{
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_2 = ___t0;
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_tEC4768F921D2D61ACB0483B081A635DF637CB7E0 * L_4 = (ABSTweenPlugin_3_tEC4768F921D2D61ACB0483B081A635DF637CB7E0 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_5 = ___t0;
-		NullCheck(L_5);
-		NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903  L_6 = (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_5->get_plugOptions_60();
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_9 = ___t0;
-		NullCheck(L_9);
-		double L_10 = (double)L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_tEC4768F921D2D61ACB0483B081A635DF637CB7E0 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 , float, double >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<System.Double,System.Double,DG.Tweening.Plugins.Options.NoOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_tEC4768F921D2D61ACB0483B081A635DF637CB7E0 *)L_4, (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_6, (float)L_8, (double)L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_12 = ___t0;
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_t6538D509EFE6B2B6A1D9E7A722A7CA219E4AB890 * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.Int32,System.Int32,DG.Tweening.Plugins.Options.NoOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisInt32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_TisInt32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_TisNoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903_mB93B68126CEBE6596B0E687B4F7785083170EC2D_gshared (TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * G_B4_0 = NULL;
-	TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * G_B5_1 = NULL;
-	{
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_2 = ___t0;
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_t9E1908A1F1C31ED571433EEB266EA3936C8F349D * L_4 = (ABSTweenPlugin_3_t9E1908A1F1C31ED571433EEB266EA3936C8F349D *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_5 = ___t0;
-		NullCheck(L_5);
-		NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903  L_6 = (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_5->get_plugOptions_60();
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_9 = ___t0;
-		NullCheck(L_9);
-		int32_t L_10 = (int32_t)L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_t9E1908A1F1C31ED571433EEB266EA3936C8F349D *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 , float, int32_t >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<System.Int32,System.Int32,DG.Tweening.Plugins.Options.NoOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_t9E1908A1F1C31ED571433EEB266EA3936C8F349D *)L_4, (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_6, (float)L_8, (int32_t)L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_12 = ___t0;
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_t5C07324C2EA38119743CE11ADED0DE2A8BD733E1 * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.Int64,System.Int64,DG.Tweening.Plugins.Options.NoOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisInt64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_TisInt64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_TisNoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903_m2F8D0A968AA5317F56A5955AD84175820502E8B8_gshared (TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * G_B4_0 = NULL;
-	TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * G_B5_1 = NULL;
-	{
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_2 = ___t0;
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_t4A2260E86D1E2CFFDED6D659E80905BE27418BA3 * L_4 = (ABSTweenPlugin_3_t4A2260E86D1E2CFFDED6D659E80905BE27418BA3 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_5 = ___t0;
-		NullCheck(L_5);
-		NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903  L_6 = (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_5->get_plugOptions_60();
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_9 = ___t0;
-		NullCheck(L_9);
-		int64_t L_10 = (int64_t)L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_t4A2260E86D1E2CFFDED6D659E80905BE27418BA3 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 , float, int64_t >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<System.Int64,System.Int64,DG.Tweening.Plugins.Options.NoOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_t4A2260E86D1E2CFFDED6D659E80905BE27418BA3 *)L_4, (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_6, (float)L_8, (int64_t)L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_12 = ___t0;
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_tD9A17EEC83E1686B3FAEF49532411BEE6715BE6A * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.Object,System.Object,DG.Tweening.Plugins.Options.NoOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisRuntimeObject_TisRuntimeObject_TisNoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903_m994881CD8D34238051416225C52148821DF9FDC8_gshared (TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * G_B4_0 = NULL;
-	TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * G_B5_1 = NULL;
-	{
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_2 = ___t0;
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_t912D5D95D7225F91759832CC5B91E26FE57E0599 * L_4 = (ABSTweenPlugin_3_t912D5D95D7225F91759832CC5B91E26FE57E0599 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_5 = ___t0;
-		NullCheck(L_5);
-		NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903  L_6 = (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_5->get_plugOptions_60();
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_9 = ___t0;
-		NullCheck(L_9);
-		RuntimeObject * L_10 = (RuntimeObject *)L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_t912D5D95D7225F91759832CC5B91E26FE57E0599 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 , float, RuntimeObject * >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<System.Object,System.Object,DG.Tweening.Plugins.Options.NoOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_t912D5D95D7225F91759832CC5B91E26FE57E0599 *)L_4, (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_6, (float)L_8, (RuntimeObject *)L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_12 = ___t0;
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_tC62415BF62A85E3E57CC1D0534CAD2605ACE7824 * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.Object,System.Object,DG.Tweening.Plugins.Options.StringOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisRuntimeObject_TisRuntimeObject_TisStringOptions_tEBC24F7E4EAEE1FAAF8E33BD1CB4D4C550697104_m48DBB7DB28AD5489D6D9043946A3C042A5D99BF0_gshared (TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * G_B4_0 = NULL;
-	TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * G_B5_1 = NULL;
-	{
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_2 = ___t0;
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_t32649AA4552248CA087AA1F72AC64F500BA5CB8C * L_4 = (ABSTweenPlugin_3_t32649AA4552248CA087AA1F72AC64F500BA5CB8C *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_5 = ___t0;
-		NullCheck(L_5);
-		StringOptions_tEBC24F7E4EAEE1FAAF8E33BD1CB4D4C550697104  L_6 = (StringOptions_tEBC24F7E4EAEE1FAAF8E33BD1CB4D4C550697104 )L_5->get_plugOptions_60();
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_9 = ___t0;
-		NullCheck(L_9);
-		RuntimeObject * L_10 = (RuntimeObject *)L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_t32649AA4552248CA087AA1F72AC64F500BA5CB8C *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, StringOptions_tEBC24F7E4EAEE1FAAF8E33BD1CB4D4C550697104 , float, RuntimeObject * >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<System.Object,System.Object,DG.Tweening.Plugins.Options.StringOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_t32649AA4552248CA087AA1F72AC64F500BA5CB8C *)L_4, (StringOptions_tEBC24F7E4EAEE1FAAF8E33BD1CB4D4C550697104 )L_6, (float)L_8, (RuntimeObject *)L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_12 = ___t0;
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_t1F63481514B9FE3BA55AD131A58B510226137353 * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<UnityEngine.Quaternion,UnityEngine.Quaternion,DG.Tweening.Plugins.Options.NoOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisQuaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_TisQuaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_TisNoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903_m79343367FAEFFE2C0B74DC49CAF83504610F3117_gshared (TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * G_B4_0 = NULL;
-	TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * G_B5_1 = NULL;
-	{
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_2 = ___t0;
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_t5859705204C671A2CD038B6F78E48A79D2C2FBF5 * L_4 = (ABSTweenPlugin_3_t5859705204C671A2CD038B6F78E48A79D2C2FBF5 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_5 = ___t0;
-		NullCheck(L_5);
-		NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903  L_6 = (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_5->get_plugOptions_60();
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_9 = ___t0;
-		NullCheck(L_9);
-		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_10 = (Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 )L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_t5859705204C671A2CD038B6F78E48A79D2C2FBF5 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 , float, Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<UnityEngine.Quaternion,UnityEngine.Quaternion,DG.Tweening.Plugins.Options.NoOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_t5859705204C671A2CD038B6F78E48A79D2C2FBF5 *)L_4, (NoOptions_tC6268051BD5FC68CCF71210DB794123387EA0903 )L_6, (float)L_8, (Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 )L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_12 = ___t0;
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_tF7964410A3877B7CD5485528B0964EEF33C0D715 * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<UnityEngine.Quaternion,UnityEngine.Vector3,DG.Tweening.Plugins.Options.QuaternionOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisQuaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_TisVector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E_TisQuaternionOptions_t9BA8DBC2ED667232C8679DD1BFAE694ED6D19BEA_mF16926C406BEB0B9FAF6406D959B46FDF111DD8B_gshared (TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * G_B4_0 = NULL;
-	TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * G_B5_1 = NULL;
-	{
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_2 = ___t0;
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_tAB54EC748E301BA6BF2478FE60B1309A5011DD82 * L_4 = (ABSTweenPlugin_3_tAB54EC748E301BA6BF2478FE60B1309A5011DD82 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_5 = ___t0;
-		NullCheck(L_5);
-		QuaternionOptions_t9BA8DBC2ED667232C8679DD1BFAE694ED6D19BEA  L_6 = (QuaternionOptions_t9BA8DBC2ED667232C8679DD1BFAE694ED6D19BEA )L_5->get_plugOptions_60();
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_9 = ___t0;
-		NullCheck(L_9);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_10 = (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E )L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_tAB54EC748E301BA6BF2478FE60B1309A5011DD82 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, QuaternionOptions_t9BA8DBC2ED667232C8679DD1BFAE694ED6D19BEA , float, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<UnityEngine.Quaternion,UnityEngine.Vector3,DG.Tweening.Plugins.Options.QuaternionOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_tAB54EC748E301BA6BF2478FE60B1309A5011DD82 *)L_4, (QuaternionOptions_t9BA8DBC2ED667232C8679DD1BFAE694ED6D19BEA )L_6, (float)L_8, (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E )L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_12 = ___t0;
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_t7DD64F4EC391C9965BE57AF51EC240453ADB1EFB * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<UnityEngine.Rect,UnityEngine.Rect,DG.Tweening.Plugins.Options.RectOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisRect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878_TisRect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878_TisRectOptions_tB87748888062BF0B1F51E91FF703A81671355E1C_m4239931B1A411566B3D0C8687A7E7C2CED82C1F5_gshared (TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * G_B4_0 = NULL;
-	TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * G_B5_1 = NULL;
-	{
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_2 = ___t0;
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_t33D1808F9AAA0B1CB88D92C80A0614628956C238 * L_4 = (ABSTweenPlugin_3_t33D1808F9AAA0B1CB88D92C80A0614628956C238 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_5 = ___t0;
-		NullCheck(L_5);
-		RectOptions_tB87748888062BF0B1F51E91FF703A81671355E1C  L_6 = (RectOptions_tB87748888062BF0B1F51E91FF703A81671355E1C )L_5->get_plugOptions_60();
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_9 = ___t0;
-		NullCheck(L_9);
-		Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878  L_10 = (Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878 )L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_t33D1808F9AAA0B1CB88D92C80A0614628956C238 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, RectOptions_tB87748888062BF0B1F51E91FF703A81671355E1C , float, Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878  >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<UnityEngine.Rect,UnityEngine.Rect,DG.Tweening.Plugins.Options.RectOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_t33D1808F9AAA0B1CB88D92C80A0614628956C238 *)L_4, (RectOptions_tB87748888062BF0B1F51E91FF703A81671355E1C )L_6, (float)L_8, (Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878 )L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_12 = ___t0;
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_tEBEFF26A50AFDEACFC2ABA02E01623A540D6AC4F * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
-// System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.Single,System.Single,DG.Tweening.Plugins.Options.FloatOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisSingle_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_TisSingle_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_TisFloatOptions_t83EDE0C4170937A97158EC0DE5DBBABB89818603_m499DB0406956BFE397C6D203B769D3A1DA03552C_gshared (TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * ___t0, const RuntimeMethod* method)
-{
-	TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * G_B4_0 = NULL;
-	TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * G_B3_0 = NULL;
-	float G_B5_0 = 0.0f;
-	TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * G_B5_1 = NULL;
-	{
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_0 = ___t0;
-		NullCheck(L_0);
-		bool L_1 = (bool)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_0)->get_isSpeedBased_24();
-		if (!L_1)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_2 = ___t0;
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_3 = ___t0;
-		NullCheck(L_3);
-		ABSTweenPlugin_3_tCBAE7B953324A17FF3FA58E62DF7FFF2F5870916 * L_4 = (ABSTweenPlugin_3_tCBAE7B953324A17FF3FA58E62DF7FFF2F5870916 *)L_3->get_tweenPlugin_63();
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_5 = ___t0;
-		NullCheck(L_5);
-		FloatOptions_t83EDE0C4170937A97158EC0DE5DBBABB89818603  L_6 = (FloatOptions_t83EDE0C4170937A97158EC0DE5DBBABB89818603 )L_5->get_plugOptions_60();
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_7 = ___t0;
-		NullCheck(L_7);
-		float L_8 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_7)->get_duration_26();
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_9 = ___t0;
-		NullCheck(L_9);
-		float L_10 = (float)L_9->get_changeValue_59();
-		NullCheck((ABSTweenPlugin_3_tCBAE7B953324A17FF3FA58E62DF7FFF2F5870916 *)L_4);
-		float L_11;
-		L_11 = VirtFuncInvoker3< float, FloatOptions_t83EDE0C4170937A97158EC0DE5DBBABB89818603 , float, float >::Invoke(10 /* System.Single DG.Tweening.Plugins.Core.ABSTweenPlugin`3<System.Single,System.Single,DG.Tweening.Plugins.Options.FloatOptions>::GetSpeedBasedDuration(TPlugOptions,System.Single,T2) */, (ABSTweenPlugin_3_tCBAE7B953324A17FF3FA58E62DF7FFF2F5870916 *)L_4, (FloatOptions_t83EDE0C4170937A97158EC0DE5DBBABB89818603 )L_6, (float)L_8, (float)L_10);
-		NullCheck(L_2);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_2)->set_duration_26(L_11);
-	}
-
-IL_002b:
-	{
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_12 = ___t0;
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_13 = ___t0;
-		NullCheck(L_13);
-		int32_t L_14 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_13)->get_loops_27();
-		G_B3_0 = L_12;
-		if ((((int32_t)L_14) > ((int32_t)(-1))))
-		{
-			G_B4_0 = L_12;
-			goto IL_003c;
-		}
-	}
-	{
-		G_B5_0 = (std::numeric_limits<float>::infinity());
-		G_B5_1 = G_B3_0;
-		goto IL_004a;
-	}
-
-IL_003c:
-	{
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_15 = ___t0;
-		NullCheck(L_15);
-		float L_16 = (float)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_15)->get_duration_26();
-		TweenerCore_3_tB6BE91A77F164BE41E0206B88B735BC28790F5E6 * L_17 = ___t0;
-		NullCheck(L_17);
-		int32_t L_18 = (int32_t)((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)L_17)->get_loops_27();
-		G_B5_0 = ((float)il2cpp_codegen_multiply((float)L_16, (float)((float)((float)L_18))));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_004a:
-	{
-		NullCheck(G_B5_1);
-		((Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 *)G_B5_1)->set_fullDuration_48(G_B5_0);
-		return;
-	}
-}
 // System.Void DG.Tweening.Tweener::DOStartupDurationBased<System.UInt32,System.UInt32,DG.Tweening.Plugins.Options.UintOptions>(DG.Tweening.Core.TweenerCore`3<T1,T2,TPlugOptions>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tweener_DOStartupDurationBased_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_TisUInt32_tE60352A06233E4E69DD198BCC67142159F686B15_TisUintOptions_tF32D64824C4708B083DB716F323262B7BE4195F9_mC4B20CA638EF26B24F451D07AD3D84B5675E9FD0_gshared (TweenerCore_3_t42BE22A24F7F56A9443B4904003AD3E38623C86C * ___t0, const RuntimeMethod* method)
 {
@@ -38579,6 +37830,468 @@ IL_0272:
 	{
 		double L_108 = V_3;
 		return (double)L_108;
+	}
+}
+// ArrayType UnityEngine._AndroidJNIHelper::ConvertFromJNIArray<System.Int16>(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t _AndroidJNIHelper_ConvertFromJNIArray_TisInt16_tD0F031114106263BB459DA1F099FF9F42691295A_m8139D52A1384EE34677345013798688D522DFF37_gshared (intptr_t ___array0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidReflection_tEB6633FD5B7D2816E1AC6C711E11B2DD33822F16_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Byte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Char_tFF60D8E7E89A20BE2294A003734341BD1DF43E14_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16_tD0F031114106263BB459DA1F099FF9F42691295A_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SByte_t928712DD662DC29BA4FAAE8CE2230AFB23447F0B_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral24CC8D396132365E532646F936DFC8579E2299B2);
+		s_Il2CppMethodInitialized = true;
+	}
+	Type_t * V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	int16_t V_3 = 0;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	bool V_11 = false;
+	bool V_12 = false;
+	int32_t V_13 = 0;
+	StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* V_14 = NULL;
+	int32_t V_15 = 0;
+	intptr_t V_16;
+	memset((&V_16), 0, sizeof(V_16));
+	bool V_17 = false;
+	bool V_18 = false;
+	int32_t V_19 = 0;
+	AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120* V_20 = NULL;
+	int32_t V_21 = 0;
+	intptr_t V_22;
+	memset((&V_22), 0, sizeof(V_22));
+	bool V_23 = false;
+	int16_t V_24 = 0;
+	Type_t * G_B32_0 = NULL;
+	String_t* G_B32_1 = NULL;
+	Type_t * G_B31_0 = NULL;
+	String_t* G_B31_1 = NULL;
+	String_t* G_B33_0 = NULL;
+	String_t* G_B33_1 = NULL;
+	{
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_0 = { reinterpret_cast<intptr_t> (IL2CPP_RGCTX_TYPE(method->rgctx_data, 0)) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_1;
+		L_1 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_0, /*hidden argument*/NULL);
+		NullCheck((Type_t *)L_1);
+		Type_t * L_2;
+		L_2 = VirtFuncInvoker0< Type_t * >::Invoke(100 /* System.Type System.Type::GetElementType() */, (Type_t *)L_1);
+		V_0 = (Type_t *)L_2;
+		Type_t * L_3 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(AndroidReflection_tEB6633FD5B7D2816E1AC6C711E11B2DD33822F16_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = AndroidReflection_IsPrimitive_mDD6A4050793DF2FA1EDF58010982C64A3F17376D((Type_t *)L_3, /*hidden argument*/NULL);
+		V_1 = (bool)L_4;
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_0173;
+		}
+	}
+	{
+		Type_t * L_6 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_7 = { reinterpret_cast<intptr_t> (Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_8;
+		L_8 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_7, /*hidden argument*/NULL);
+		V_2 = (bool)((((RuntimeObject*)(Type_t *)L_6) == ((RuntimeObject*)(Type_t *)L_8))? 1 : 0);
+		bool L_9 = V_2;
+		if (!L_9)
+		{
+			goto IL_0041;
+		}
+	}
+	{
+		intptr_t L_10 = ___array0;
+		Int32U5BU5D_t70F1BDC14B1786481B176D6139A5E3B87DC54C32* L_11;
+		L_11 = AndroidJNISafe_FromIntArray_mBF0C0B4309BA525BBA12D7FD3C2790C8FA7C4703((intptr_t)L_10, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_11, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0041:
+	{
+		Type_t * L_12 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_13 = { reinterpret_cast<intptr_t> (Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_14;
+		L_14 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_13, /*hidden argument*/NULL);
+		V_4 = (bool)((((RuntimeObject*)(Type_t *)L_12) == ((RuntimeObject*)(Type_t *)L_14))? 1 : 0);
+		bool L_15 = V_4;
+		if (!L_15)
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		intptr_t L_16 = ___array0;
+		BooleanU5BU5D_tEC7BAF93C44F875016DAADC8696EE3A465644D3C* L_17;
+		L_17 = AndroidJNISafe_FromBooleanArray_m77A66C34FCB94ADB1AD5E1D88262500C930A5DBF((intptr_t)L_16, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_17, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0065:
+	{
+		Type_t * L_18 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_19 = { reinterpret_cast<intptr_t> (Byte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_20;
+		L_20 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_19, /*hidden argument*/NULL);
+		V_5 = (bool)((((RuntimeObject*)(Type_t *)L_18) == ((RuntimeObject*)(Type_t *)L_20))? 1 : 0);
+		bool L_21 = V_5;
+		if (!L_21)
+		{
+			goto IL_0095;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7((RuntimeObject *)_stringLiteral24CC8D396132365E532646F936DFC8579E2299B2, /*hidden argument*/NULL);
+		intptr_t L_22 = ___array0;
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_23;
+		L_23 = AndroidJNISafe_FromByteArray_m81760A688AECE368E1CFF7DAAC8E141F1B8FA8A8((intptr_t)L_22, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_23, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0095:
+	{
+		Type_t * L_24 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_25 = { reinterpret_cast<intptr_t> (SByte_t928712DD662DC29BA4FAAE8CE2230AFB23447F0B_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_26;
+		L_26 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_25, /*hidden argument*/NULL);
+		V_6 = (bool)((((RuntimeObject*)(Type_t *)L_24) == ((RuntimeObject*)(Type_t *)L_26))? 1 : 0);
+		bool L_27 = V_6;
+		if (!L_27)
+		{
+			goto IL_00b9;
+		}
+	}
+	{
+		intptr_t L_28 = ___array0;
+		SByteU5BU5D_t7D94C53295E6116625EA7CC7DEA21FEDC39869E7* L_29;
+		L_29 = AndroidJNISafe_FromSByteArray_m01F6539AF10F86B3927436955B57CC809C52416D((intptr_t)L_28, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_29, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_00b9:
+	{
+		Type_t * L_30 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_31 = { reinterpret_cast<intptr_t> (Int16_tD0F031114106263BB459DA1F099FF9F42691295A_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_32;
+		L_32 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_31, /*hidden argument*/NULL);
+		V_7 = (bool)((((RuntimeObject*)(Type_t *)L_30) == ((RuntimeObject*)(Type_t *)L_32))? 1 : 0);
+		bool L_33 = V_7;
+		if (!L_33)
+		{
+			goto IL_00dd;
+		}
+	}
+	{
+		intptr_t L_34 = ___array0;
+		Int16U5BU5D_tD134F1E6F746D4C09C987436805256C210C2FFCD* L_35;
+		L_35 = AndroidJNISafe_FromShortArray_mCDF5B796D950D31035BD35A2E463D41509E4A5CD((intptr_t)L_34, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_35, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_00dd:
+	{
+		Type_t * L_36 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_37 = { reinterpret_cast<intptr_t> (Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_38;
+		L_38 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_37, /*hidden argument*/NULL);
+		V_8 = (bool)((((RuntimeObject*)(Type_t *)L_36) == ((RuntimeObject*)(Type_t *)L_38))? 1 : 0);
+		bool L_39 = V_8;
+		if (!L_39)
+		{
+			goto IL_0101;
+		}
+	}
+	{
+		intptr_t L_40 = ___array0;
+		Int64U5BU5D_tCA61E42872C63A4286B24EEE6E0650143B43DCE6* L_41;
+		L_41 = AndroidJNISafe_FromLongArray_m0E7C56CB8CFD0EC240F0D86ECBBFD635FFE55CDA((intptr_t)L_40, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_41, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0101:
+	{
+		Type_t * L_42 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_43 = { reinterpret_cast<intptr_t> (Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_44;
+		L_44 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_43, /*hidden argument*/NULL);
+		V_9 = (bool)((((RuntimeObject*)(Type_t *)L_42) == ((RuntimeObject*)(Type_t *)L_44))? 1 : 0);
+		bool L_45 = V_9;
+		if (!L_45)
+		{
+			goto IL_0125;
+		}
+	}
+	{
+		intptr_t L_46 = ___array0;
+		SingleU5BU5D_t47E8DBF5B597C122478D1FFBD9DD57399A0650FA* L_47;
+		L_47 = AndroidJNISafe_FromFloatArray_mF6A63CA1B7C10BC27EEC033F0E390772DFDD652D((intptr_t)L_46, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_47, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0125:
+	{
+		Type_t * L_48 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_49 = { reinterpret_cast<intptr_t> (Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_50;
+		L_50 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_49, /*hidden argument*/NULL);
+		V_10 = (bool)((((RuntimeObject*)(Type_t *)L_48) == ((RuntimeObject*)(Type_t *)L_50))? 1 : 0);
+		bool L_51 = V_10;
+		if (!L_51)
+		{
+			goto IL_0149;
+		}
+	}
+	{
+		intptr_t L_52 = ___array0;
+		DoubleU5BU5D_t8E1B42EB2ABB79FBD193A6B8C8D97A7CDE44A4FB* L_53;
+		L_53 = AndroidJNISafe_FromDoubleArray_m9438B5668E8B2DB3B18CACFF0CC9CAEAB5EC73C8((intptr_t)L_52, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_53, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0149:
+	{
+		Type_t * L_54 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_55 = { reinterpret_cast<intptr_t> (Char_tFF60D8E7E89A20BE2294A003734341BD1DF43E14_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_56;
+		L_56 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_55, /*hidden argument*/NULL);
+		V_11 = (bool)((((RuntimeObject*)(Type_t *)L_54) == ((RuntimeObject*)(Type_t *)L_56))? 1 : 0);
+		bool L_57 = V_11;
+		if (!L_57)
+		{
+			goto IL_016d;
+		}
+	}
+	{
+		intptr_t L_58 = ___array0;
+		CharU5BU5D_t7B7FC5BC8091AA3B9CB0B29CDD80B5EE9254AA34* L_59;
+		L_59 = AndroidJNISafe_FromCharArray_mA49DB27755EF3B2AE81487E0FCFE06E23F617305((intptr_t)L_58, /*hidden argument*/NULL);
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_59, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_016d:
+	{
+		goto IL_0265;
+	}
+
+IL_0173:
+	{
+		Type_t * L_60 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_61 = { reinterpret_cast<intptr_t> (String_t_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_62;
+		L_62 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_61, /*hidden argument*/NULL);
+		V_12 = (bool)((((RuntimeObject*)(Type_t *)L_60) == ((RuntimeObject*)(Type_t *)L_62))? 1 : 0);
+		bool L_63 = V_12;
+		if (!L_63)
+		{
+			goto IL_01dc;
+		}
+	}
+	{
+		intptr_t L_64 = ___array0;
+		int32_t L_65;
+		L_65 = AndroidJNISafe_GetArrayLength_m3015C191DBFC246946A88592731441A934507B56((intptr_t)L_64, /*hidden argument*/NULL);
+		V_13 = (int32_t)L_65;
+		int32_t L_66 = V_13;
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_67 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)L_66);
+		V_14 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)L_67;
+		V_15 = (int32_t)0;
+		goto IL_01c3;
+	}
+
+IL_019d:
+	{
+		intptr_t L_68 = ___array0;
+		int32_t L_69 = V_15;
+		intptr_t L_70;
+		L_70 = AndroidJNI_GetObjectArrayElement_m502026BF77232EE45D03661E4923C2E5E99FDE18((intptr_t)L_68, (int32_t)L_69, /*hidden argument*/NULL);
+		V_16 = (intptr_t)L_70;
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_71 = V_14;
+		int32_t L_72 = V_15;
+		intptr_t L_73 = V_16;
+		String_t* L_74;
+		L_74 = AndroidJNISafe_GetStringChars_mD59FFDE4192F837E1380B51569B5803E09BE58C8((intptr_t)L_73, /*hidden argument*/NULL);
+		NullCheck(L_71);
+		ArrayElementTypeCheck (L_71, L_74);
+		(L_71)->SetAt(static_cast<il2cpp_array_size_t>(L_72), (String_t*)L_74);
+		intptr_t L_75 = V_16;
+		AndroidJNISafe_DeleteLocalRef_m7AB242A76D13A3BF4C04831D77960C020D6ADA39((intptr_t)L_75, /*hidden argument*/NULL);
+		int32_t L_76 = V_15;
+		V_15 = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_76, (int32_t)1));
+	}
+
+IL_01c3:
+	{
+		int32_t L_77 = V_15;
+		int32_t L_78 = V_13;
+		V_17 = (bool)((((int32_t)L_77) < ((int32_t)L_78))? 1 : 0);
+		bool L_79 = V_17;
+		if (L_79)
+		{
+			goto IL_019d;
+		}
+	}
+	{
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_80 = V_14;
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_80, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_01dc:
+	{
+		Type_t * L_81 = V_0;
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_82 = { reinterpret_cast<intptr_t> (AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_83;
+		L_83 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_82, /*hidden argument*/NULL);
+		V_18 = (bool)((((RuntimeObject*)(Type_t *)L_81) == ((RuntimeObject*)(Type_t *)L_83))? 1 : 0);
+		bool L_84 = V_18;
+		if (!L_84)
+		{
+			goto IL_0242;
+		}
+	}
+	{
+		intptr_t L_85 = ___array0;
+		int32_t L_86;
+		L_86 = AndroidJNISafe_GetArrayLength_m3015C191DBFC246946A88592731441A934507B56((intptr_t)L_85, /*hidden argument*/NULL);
+		V_19 = (int32_t)L_86;
+		int32_t L_87 = V_19;
+		AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120* L_88 = (AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120*)(AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120*)SZArrayNew(AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120_il2cpp_TypeInfo_var, (uint32_t)L_87);
+		V_20 = (AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120*)L_88;
+		V_21 = (int32_t)0;
+		goto IL_022c;
+	}
+
+IL_0206:
+	{
+		intptr_t L_89 = ___array0;
+		int32_t L_90 = V_21;
+		intptr_t L_91;
+		L_91 = AndroidJNI_GetObjectArrayElement_m502026BF77232EE45D03661E4923C2E5E99FDE18((intptr_t)L_89, (int32_t)L_90, /*hidden argument*/NULL);
+		V_22 = (intptr_t)L_91;
+		AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120* L_92 = V_20;
+		int32_t L_93 = V_21;
+		intptr_t L_94 = V_22;
+		AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E * L_95 = (AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E *)il2cpp_codegen_object_new(AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E_il2cpp_TypeInfo_var);
+		AndroidJavaObject__ctor_m880F6533139DF0BD36C6EF428E45E9F44B6534A3(L_95, (intptr_t)L_94, /*hidden argument*/NULL);
+		NullCheck(L_92);
+		ArrayElementTypeCheck (L_92, L_95);
+		(L_92)->SetAt(static_cast<il2cpp_array_size_t>(L_93), (AndroidJavaObject_t10188D5695DCD09C9F621B44B0A8C93A2281236E *)L_95);
+		intptr_t L_96 = V_22;
+		AndroidJNISafe_DeleteLocalRef_m7AB242A76D13A3BF4C04831D77960C020D6ADA39((intptr_t)L_96, /*hidden argument*/NULL);
+		int32_t L_97 = V_21;
+		V_21 = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_97, (int32_t)1));
+	}
+
+IL_022c:
+	{
+		int32_t L_98 = V_21;
+		int32_t L_99 = V_19;
+		V_23 = (bool)((((int32_t)L_98) < ((int32_t)L_99))? 1 : 0);
+		bool L_100 = V_23;
+		if (L_100)
+		{
+			goto IL_0206;
+		}
+	}
+	{
+		AndroidJavaObjectU5BU5D_tEE28563C9013906CEB39794019A55F4BA5B06120* L_101 = V_20;
+		V_3 = (int16_t)((*(int16_t*)((int16_t*)UnBox((RuntimeObject *)L_101, IL2CPP_RGCTX_DATA(method->rgctx_data, 1)))));
+		goto IL_0272;
+	}
+
+IL_0242:
+	{
+		Type_t * L_102 = V_0;
+		Type_t * L_103 = (Type_t *)L_102;
+		G_B31_0 = L_103;
+		G_B31_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral51253131B895C2F8066BCC47E62D44F18F43446C));
+		if (L_103)
+		{
+			G_B32_0 = L_103;
+			G_B32_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral51253131B895C2F8066BCC47E62D44F18F43446C));
+			goto IL_0250;
+		}
+	}
+	{
+		G_B33_0 = ((String_t*)(NULL));
+		G_B33_1 = G_B31_1;
+		goto IL_0255;
+	}
+
+IL_0250:
+	{
+		NullCheck((RuntimeObject *)G_B32_0);
+		String_t* L_104;
+		L_104 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, (RuntimeObject *)G_B32_0);
+		G_B33_0 = L_104;
+		G_B33_1 = G_B32_1;
+	}
+
+IL_0255:
+	{
+		String_t* L_105;
+		L_105 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44((String_t*)G_B33_1, (String_t*)G_B33_0, (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D)), /*hidden argument*/NULL);
+		Exception_t * L_106 = (Exception_t *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
+		Exception__ctor_m8ECDE8ACA7F2E0EF1144BD1200FB5DB2870B5F11(L_106, (String_t*)L_105, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_106, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_AndroidJNIHelper_ConvertFromJNIArray_TisInt16_tD0F031114106263BB459DA1F099FF9F42691295A_m8139D52A1384EE34677345013798688D522DFF37_RuntimeMethod_var)));
+	}
+
+IL_0265:
+	{
+		il2cpp_codegen_initobj((&V_24), sizeof(int16_t));
+		int16_t L_107 = V_24;
+		V_3 = (int16_t)L_107;
+		goto IL_0272;
+	}
+
+IL_0272:
+	{
+		int16_t L_108 = V_3;
+		return (int16_t)L_108;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Tween_set_isRelative_m000972532A32D9F382C7A4B8D1945B354D200A3D_inline (Tween_tF17E40B3AD65D4E0C7E78D43A9224C6A1FC4C941 * __this, bool ___value0, const RuntimeMethod* method)
