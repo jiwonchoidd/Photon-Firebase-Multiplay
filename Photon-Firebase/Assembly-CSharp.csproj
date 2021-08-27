@@ -100,11 +100,13 @@
     <Compile Include="Assets\Scripts\Tween.cs" />
     <Compile Include="Assets\GooglePlayGames\Platforms\NearbyConnectionClientFactory.cs" />
     <Compile Include="Assets\GooglePlayGames\Platforms\Android\AndroidClient.cs" />
+    <Compile Include="Assets\Scripts\Photon\ToolNetwork.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyFSM.cs" />
     <Compile Include="Assets\Scripts\ItemDB.cs" />
     <Compile Include="Assets\GooglePlayGames\ISocialPlatform\PlayGamesUserProfile.cs" />
     <Compile Include="Assets\GooglePlayGames\OurUtils\PlatformUtils.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Scripts\Player\TouchControl.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\GooglePlayGames\OurUtils\NearbyHelperObject.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
@@ -165,7 +167,6 @@
     <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\EndpointDetails.cs" />
     <Compile Include="Assets\Scripts\Player\FootStepSolo.cs" />
     <Compile Include="Assets\Unity_EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Player\ToolNetwork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
