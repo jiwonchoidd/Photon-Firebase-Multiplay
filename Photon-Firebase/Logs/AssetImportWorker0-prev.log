@@ -15,11 +15,11 @@ E:/github/Photon-Firebase-Multiplay/Photon-Firebase
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61113
+55140
 Successfully changed project path to: E:/github/Photon-Firebase-Multiplay/Photon-Firebase
 E:/github/Photon-Firebase-Multiplay/Photon-Firebase
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 106.58 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 120.92 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.10f1 (297d780c91bc)
 [Subsystems] Discovering subsystems at path E:/unity/project/2020.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -36,22 +36,22 @@ Initialize mono
 Mono path[0] = 'E:/unity/project/2020.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'E:/unity/project/2020.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/unity/project/2020.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56256
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/unity/project/2020.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001698 seconds.
+Registered in 0.001786 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 71.54 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 76.35 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.609 seconds
+- Completed reload, in  4.335 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.024589 seconds.
+Registered in 0.029617 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 70.49 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 69.66 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 GPGSUpgrader start
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -76,28 +76,115 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.444 seconds
+- Completed reload, in  1.512 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 1.45 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4249 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 269.0 MB.
-System memory in use after: 269.2 MB.
+Unloading 4253 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 269.3 MB.
+System memory in use after: 269.5 MB.
 
-Unloading 118 unused Assets to reduce memory usage. Loaded Objects now: 4639.
-Total: 3.224200 ms (FindLiveObjects: 0.372100 ms CreateObjectMapping: 0.199900 ms MarkObjects: 2.549500 ms  DeleteObjects: 0.101800 ms)
+Unloading 117 unused Assets to reduce memory usage. Loaded Objects now: 4643.
+Total: 3.254700 ms (FindLiveObjects: 0.386400 ms CreateObjectMapping: 0.189400 ms MarkObjects: 2.570900 ms  DeleteObjects: 0.107200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Photon/PhotonUnityNetworking/UtilityScripts/Culling
+  artifactKey: Guid(404d7999c3b78454798028d2efcb9336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/UtilityScripts/Culling using Guid(404d7999c3b78454798028d2efcb9336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231c6f9295767391d378043fc8affdc5') in 0.009531 seconds
+  Import took 0.015072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 160.388606 seconds.
+  path: Assets/Photon/PhotonLibs/Photon3Unity3D.dll
+  artifactKey: Guid(aadb37a20a33632429047acaef43658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/Photon3Unity3D.dll using Guid(aadb37a20a33632429047acaef43658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd96b8e0697f84c068a92822163303cb9') in 0.049426 seconds
+  Import took 0.056097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.213445 seconds.
+  path: Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll
+  artifactKey: Guid(6a558ae793155af4b9b9ab945fc64a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll using Guid(6a558ae793155af4b9b9ab945fc64a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d19a4210bf8dd713eba41793d656540') in 0.003397 seconds
+  Import took 0.009087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.506227 seconds.
+  path: Assets/Photon/PhotonLibs/netstandard2.0
+  artifactKey: Guid(beb9d2a25c882b54ab2fd9adaec2b53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/netstandard2.0 using Guid(beb9d2a25c882b54ab2fd9adaec2b53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c750854d7b73f650289fc8447d4c6ece') in 0.005973 seconds
+  Import took 0.013652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.914820 seconds.
+  path: Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.deps.json
+  artifactKey: Guid(a966b98b651e18748abf2829786b5899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.deps.json using Guid(a966b98b651e18748abf2829786b5899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '908e9a33e89e1342655cdc2a43e8a6a5') in 0.019430 seconds
+  Import took 0.025322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000744 seconds.
+  path: Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.deps.json
+  artifactKey: Guid(a966b98b651e18748abf2829786b5899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.deps.json using Guid(a966b98b651e18748abf2829786b5899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '908e9a33e89e1342655cdc2a43e8a6a5') in 0.004022 seconds
+  Import took 0.009669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 99.858889 seconds.
+  path: Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb
+  artifactKey: Guid(0f6296aca03a5574eb30b4277a2076fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb using Guid(0f6296aca03a5574eb30b4277a2076fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff20bcd6cb6d989de9fbfabf4c589ae9') in 0.010382 seconds
+  Import took 0.018475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.408866 seconds.
+  path: Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll
+  artifactKey: Guid(6a558ae793155af4b9b9ab945fc64a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll using Guid(6a558ae793155af4b9b9ab945fc64a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59511bb8c28d617de84829d06f5d9f51') in 0.054067 seconds
+  Import took 0.062373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.744949 seconds.
+  path: Assets/Photon/PhotonLibs/Photon3Unity3D.dll
+  artifactKey: Guid(aadb37a20a33632429047acaef43658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonLibs/Photon3Unity3D.dll using Guid(aadb37a20a33632429047acaef43658a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64401eacfa802675177a09787deb2736') in 0.005580 seconds
+  Import took 0.013238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.415668 seconds.
+  path: Assets/Photon
+  artifactKey: Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon using Guid(98951132346795f438babe7a3183da43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ea02833009e06167eeb052b239b5b9') in 0.003993 seconds
+  Import took 0.009660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.830036 seconds.
+  path: Assets/Editor Default Resources/Firebase
+  artifactKey: Guid(dd531c87b6cb9ea40a9aef2fcb09c02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor Default Resources/Firebase using Guid(dd531c87b6cb9ea40a9aef2fcb09c02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca82ae6623dc846f22faecafce87f4e') in 0.022040 seconds
+  Import took 0.027456 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.022603 seconds.
+Registered in 0.023301 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 GPGSUpgrader start
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -122,72 +209,27 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.379 seconds
+- Completed reload, in  1.413 seconds
 Platform modules already initialized, skipping
 Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4155 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 257.6 MB.
-System memory in use after: 257.8 MB.
+Unloading 4160 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 257.9 MB.
+System memory in use after: 258.1 MB.
 
-Unloading 238 unused Assets to reduce memory usage. Loaded Objects now: 4643.
-Total: 7.929900 ms (FindLiveObjects: 0.820300 ms CreateObjectMapping: 0.532500 ms MarkObjects: 6.449200 ms  DeleteObjects: 0.125700 ms)
+Unloading 238 unused Assets to reduce memory usage. Loaded Objects now: 4646.
+Total: 3.056400 ms (FindLiveObjects: 0.320000 ms CreateObjectMapping: 0.187700 ms MarkObjects: 2.448200 ms  DeleteObjects: 0.099500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Player/TouchControl.cs
-  artifactKey: Guid(a01914de145ccd3408c650df6fc64bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/TouchControl.cs using Guid(a01914de145ccd3408c650df6fc64bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5073cccb27fa5e95a4e5a8bcc1ba2a3b') in 0.039441 seconds
-  Import took 0.054844 seconds .
+  Time since last request: 1728.084293 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(f86183a3fa00a1747b3bdee57c8f17fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset using Guid(f86183a3fa00a1747b3bdee57c8f17fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07f5493e1836a133705598c053a49e92') in 0.039427 seconds
+  Import took 0.046268 seconds .
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.021402 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-GPGSUpgrader start
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:38)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 38)
-
-GPGSUpgrader done
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:105)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.423 seconds
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4156 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 257.7 MB.
-System memory in use after: 257.9 MB.
-
-Unloading 238 unused Assets to reduce memory usage. Loaded Objects now: 4648.
-Total: 3.252000 ms (FindLiveObjects: 0.383700 ms CreateObjectMapping: 0.198600 ms MarkObjects: 2.557100 ms  DeleteObjects: 0.111700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
